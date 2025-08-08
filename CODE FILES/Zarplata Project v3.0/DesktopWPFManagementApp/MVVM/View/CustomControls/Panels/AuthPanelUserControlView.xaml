@@ -1,0 +1,401 @@
+﻿<UserControl x:Class="DesktopWPFManagementApp.MVVM.View.CustomControls.Panels.AuthPanelUserControlView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DesktopWPFManagementApp.MVVM.View.CustomControls.Panels"
+             xmlns:fontawesome="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+             xmlns:usercontrolsElements="clr-namespace:DesktopWPFManagementApp.MVVM.View.CustomControls.Elements"
+             mc:Ignorable="d" 
+             d:DesignHeight="240" d:DesignWidth="480"
+             Name="root">
+
+    <UserControl.InputBindings>
+        <KeyBinding Key="Enter" Command="{Binding AuthCommand}" CommandParameter="{Binding AuthCredential}" />
+    </UserControl.InputBindings>
+
+    <StackPanel
+        Orientation="Horizontal"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center"
+        KeyboardNavigation.TabNavigation="Cycle">
+
+        <Image 
+            x:Name="AuthMainImg"
+            Margin="-25 -15 10 0" 
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center" 
+            Source="{StaticResource AuthPanelImg}" 
+            Width="150" 
+            Height="150"
+            KeyboardNavigation.TabNavigation="None">
+
+            <Image.Style>
+                <Style TargetType="Image">
+                    <Style.Setters>
+                        <Setter Property="RenderTransform">
+                            <Setter.Value>
+                                <RotateTransform Angle="0" CenterX="0" CenterY="0" />
+                            </Setter.Value>
+                        </Setter>
+                    </Style.Setters>
+
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard
+                                            x:Name="RotateAuthMainImgBeginStoryboard">
+                                    <Storyboard>
+                                        <DoubleAnimation
+                                                    Storyboard.TargetProperty="(UIElement.RenderTransform).(RotateTransform.Angle)"
+                                                    From="0"
+                                                    To="3"
+                                                    BeginTime="0:0:0.100"
+                                                    Duration="0:0:0.150" 
+                                                    AutoReverse="True"
+                                                    RepeatBehavior="2x">
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <StopStoryboard BeginStoryboardName="RotateAuthMainImgBeginStoryboard" />
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Image.Style>
+
+        </Image>
+
+        <Grid
+            KeyboardNavigation.TabNavigation="Cycle">
+
+            <TextBlock
+                        Height="30"
+                        FontSize="25"
+                        FontFamily="Arial"
+                        Foreground="DarkGray"
+                        FontWeight="SemiBold"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Left"
+                        Margin="5 5 0 0"
+                        KeyboardNavigation.TabNavigation="None">
+                        Вход
+            </TextBlock>
+
+            <TextBlock
+                    Name="TextBlockAuthFailStatusText"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Text="{Binding AuthFailStatusText}"
+                    FontSize="13"
+                    FontFamily="Arial"
+                    FontWeight="Thin"
+                    FontStretch="ExtraExpanded"
+                    Foreground="DarkRed">
+
+                <TextBlock.Style>
+                    <Style TargetType="TextBlock">
+                        <Style.Setters>
+                            <Setter Property="Margin" Value="5 115 0 0" />
+                            <Setter Property="Visibility" Value="Hidden" />
+                        </Style.Setters>
+
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding AuthStatus}" Value="FailAuth">
+                                <DataTrigger.Setters>
+                                    <Setter Property="Visibility" Value="Visible" />
+                                </DataTrigger.Setters>
+                                
+                                <DataTrigger.EnterActions>
+                                    <BeginStoryboard
+                                        x:Name="AuthFailTextBlockBeginStoryboard">
+                                        <Storyboard>
+
+                                            <ThicknessAnimationUsingKeyFrames 
+                                                Storyboard.TargetProperty="Margin" 
+                                                BeginTime="0:0:0.0" 
+                                                Duration="0:0:0.400"
+                                                AutoReverse="False"
+                                                RepeatBehavior="1x">
+
+                                                <SplineThicknessKeyFrame KeyTime="0:0:0.000" Value="7 115 0 0" />
+                                                <SplineThicknessKeyFrame KeyTime="0:0:0.100" Value="-6 115 0 0" />
+                                                
+                                                <SplineThicknessKeyFrame KeyTime="0:0:0.200" Value="6 115 0 0" />
+                                                <SplineThicknessKeyFrame KeyTime="0:0:0.300" Value="-5 115 0 0" />
+
+                                                <SplineThicknessKeyFrame KeyTime="0:0:0.400" Value="5 115 0 0" />
+
+                                            </ThicknessAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </DataTrigger.EnterActions>
+                                <DataTrigger.ExitActions>
+                                    <StopStoryboard BeginStoryboardName="AuthFailTextBlockBeginStoryboard" />
+                                </DataTrigger.ExitActions>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+
+            </TextBlock>
+
+            <StackPanel 
+                        Orientation="Vertical" 
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                
+                <usercontrolsElements:AuthTextBoxUserControlView
+                            x:Name="AuthLogin"
+                            Height="40" 
+                            Width="205" 
+                            Icon="UserAlt" 
+                            Placeholder="Логин"
+                            FontfamilyCustom="Arial"
+                            IsPassword="False"
+                            Margin="0 5 0 0"
+                            Text="{Binding Username, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
+
+                    <usercontrolsElements:AuthTextBoxUserControlView.Style>
+                        <Style TargetType="usercontrolsElements:AuthTextBoxUserControlView">
+                            <Style.Setters>
+                                <Setter Property="IsEnabled" Value="True" />
+                            </Style.Setters>
+
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding AuthStatus, UpdateSourceTrigger=PropertyChanged}" Value="IsAuth">
+                                    <DataTrigger.Setters>
+                                        <Setter Property="IsEnabled" Value="False" />
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </usercontrolsElements:AuthTextBoxUserControlView.Style>
+
+                </usercontrolsElements:AuthTextBoxUserControlView>
+
+                <usercontrolsElements:AuthTextBoxUserControlView 
+                            x:Name="AuthPassword"
+                            Height="40" 
+                            Width="205" 
+                            Icon="Key" 
+                            Placeholder="Пароль" 
+                            IsPassword="True"
+                            Margin="0 5 0 0"
+                            Text="{Binding Password, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
+
+                    <usercontrolsElements:AuthTextBoxUserControlView.Style>
+                        <Style TargetType="usercontrolsElements:AuthTextBoxUserControlView">
+                            <Style.Setters>
+                                <Setter Property="IsEnabled" Value="True" />
+                            </Style.Setters>
+
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding AuthStatus, UpdateSourceTrigger=PropertyChanged}" Value="IsAuth">
+                                    <DataTrigger.Setters>
+                                        <Setter Property="IsEnabled" Value="False" />
+                                    </DataTrigger.Setters>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </usercontrolsElements:AuthTextBoxUserControlView.Style>
+
+                </usercontrolsElements:AuthTextBoxUserControlView>
+
+            </StackPanel>
+
+
+            <Border     
+                Name="AuthButtonBorder"
+                Margin="177,58,-27,52" 
+                Width="55"
+                Height="55"
+                Background="#111111"
+                CornerRadius="50"
+                KeyboardNavigation.TabNavigation="None">
+
+                <Border
+                            Background="#16171a"
+                            BorderBrush="#1c1a1f"
+                            BorderThickness="2"
+                            CornerRadius="50"
+                            Width="45"
+                            Height="45">
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="11*"/>
+                            <RowDefinition Height="25*"/>
+                        </Grid.RowDefinitions>
+
+                        <Border
+                                    x:Name="AuthButtonMainBorderBlur"
+                                    Background="{DynamicResource DefaultPrimaryButtonColor}"
+                                    CornerRadius="50"
+                                    Width="37"
+                                    Height="37"
+                                    Panel.ZIndex="0" 
+                                    Margin="2,2,2,2" 
+                                    Grid.RowSpan="2">
+
+                            <Border.Style>
+                                <Style TargetType="Border">
+
+                                    <Style.Setters>
+                                        <Setter Property="Effect">
+                                            <Setter.Value>
+                                                <BlurEffect Radius="0" />
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style.Setters>
+
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding ElementName=AuthButtonMain, Path=IsMouseOver}" Value="True" >
+                                            <DataTrigger.EnterActions>
+                                                <BeginStoryboard x:Name="BlurEffectBeginStoryboard">
+                                                    <Storyboard>
+                                                        <DoubleAnimation
+                                                                    Storyboard.TargetProperty="Effect.Radius"
+                                                                    From="0"
+                                                                    To="35"
+                                                                    Duration="0:0:0.800"
+                                                                    AutoReverse="True"
+                                                                    RepeatBehavior="Forever">
+                                                        </DoubleAnimation>
+                                                    </Storyboard>
+                                                </BeginStoryboard>
+                                            </DataTrigger.EnterActions>
+                                            <DataTrigger.ExitActions>
+                                                <StopStoryboard BeginStoryboardName="BlurEffectBeginStoryboard"/>
+                                            </DataTrigger.ExitActions>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+
+                                </Style>
+                            </Border.Style>
+
+                        </Border>
+
+                        <Button
+                                    Name="AuthButtonMain"
+                                    Background="{DynamicResource DefaultPrimaryButtonColor}"
+                                    Width="37"
+                                    Height="37"
+                                    Cursor="Hand"
+                                    Margin="2,2,2,2" 
+                                    Grid.RowSpan="2"
+                                    IsEnabled="True"
+                                    Command="{Binding AuthCommand}"
+                                    CommandParameter="{Binding AuthCredential}">
+
+                            <Button.Style>
+                                <Style TargetType="Button">
+                                    <Style.Setters>
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="Button">
+                                                    <ContentControl>
+                                                        <Border
+                                                                    x:Name="AuthButtonMainBorder"
+                                                                    Background="{TemplateBinding Background}"
+                                                                    CornerRadius="50"
+                                                                    Width="{TemplateBinding Width}"
+                                                                    Height="{TemplateBinding Height}"
+                                                                    Cursor="{TemplateBinding Cursor}"
+                                                                    IsEnabled="{TemplateBinding IsEnabled}">
+
+                                                            <Grid Name="AuthButtonMainGrid">
+                                                                <fontawesome:IconImage 
+                                                                            x:Name="AuthButtonMainIconRow"
+                                                                            Icon="RightLong" 
+                                                                            Foreground="DarkGray" 
+                                                                            Height="20" Width="20">
+
+                                                                    <Image.Style>
+                                                                        <Style TargetType="Image">
+                                                                            <Style.Setters>
+                                                                                <Setter Property="LayoutTransform">
+                                                                                    <Setter.Value>
+                                                                                        <RotateTransform Angle="0" CenterX="0" CenterY="0" />
+                                                                                    </Setter.Value>
+                                                                                </Setter>
+                                                                            </Style.Setters>
+                                                                        </Style>
+                                                                    </Image.Style>
+                                                                </fontawesome:IconImage>
+                                                            </Grid>
+                                                        </Border>
+                                                    </ContentControl>
+
+                                                    <ControlTemplate.Triggers>
+                                                        <Trigger Property="IsPressed" Value="True">
+                                                            <Trigger.Setters>
+                                                                <Setter TargetName="AuthButtonMainBorder" Property="Width" Value="35" />
+                                                                <Setter TargetName="AuthButtonMainBorder" Property="Height" Value="35" />
+
+
+                                                                <Setter TargetName="AuthButtonMainIconRow" Property="Width" Value="18" />
+                                                                <Setter TargetName="AuthButtonMainIconRow" Property="Height" Value="18" />
+                                                            </Trigger.Setters>
+                                                        </Trigger>
+
+                                                        <DataTrigger Binding="{Binding AuthStatus}" Value="ReadyToAuth">
+                                                            <DataTrigger.Setters>
+                                                                <Setter TargetName="AuthButtonMainIconRow" Property="Foreground" Value="White" />
+                                                            </DataTrigger.Setters>
+                                                        </DataTrigger>
+
+                                                        <DataTrigger Binding="{Binding AuthStatus}" Value="FailAuth">
+                                                            <DataTrigger.Setters>
+                                                                <Setter TargetName="AuthButtonMainIconRow" Property="Foreground" Value="White" />
+                                                                <Setter TargetName="AuthButtonMainBorder" Property="FocusManager.FocusedElement"
+                                                                    Value="{Binding ElementName=AuthButtonMainBorder}" />
+                                                            </DataTrigger.Setters>
+                                                        </DataTrigger>
+
+                                                        <DataTrigger Binding="{Binding AuthStatus}" Value="IsAuth">
+                                                            <DataTrigger.Setters>
+                                                                <Setter TargetName="AuthButtonMainIconRow" Property="Foreground" Value="White" />
+                                                                <Setter TargetName="AuthButtonMainIconRow" Property="Icon" Value="Spinner" />
+                                                            </DataTrigger.Setters>
+
+                                                            <DataTrigger.EnterActions>
+                                                                <BeginStoryboard
+                                                                            x:Name="AuthButtonMainIconBeginStoryboard">
+                                                                    <Storyboard>
+                                                                        <DoubleAnimation
+                                                                                    Storyboard.TargetName="AuthButtonMainIconRow"
+                                                                                    Storyboard.TargetProperty="(LayoutTransform).(RotateTransform.Angle)"
+                                                                                    From="0"
+                                                                                    To="360"
+                                                                                    BeginTime="0:0:0.0"
+                                                                                    Duration="0:0:1.150" 
+                                                                                    AutoReverse="False"
+                                                                                    RepeatBehavior="Forever">
+                                                                        </DoubleAnimation>
+                                                                    </Storyboard>
+                                                                </BeginStoryboard>
+                                                            </DataTrigger.EnterActions>
+                                                            <DataTrigger.ExitActions>
+                                                                <StopStoryboard BeginStoryboardName="AuthButtonMainIconBeginStoryboard" />
+                                                            </DataTrigger.ExitActions>
+                                                        </DataTrigger>
+                                                    </ControlTemplate.Triggers>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style.Setters>
+                                </Style>
+                            </Button.Style>
+                        </Button>
+                    </Grid>
+
+                </Border>
+            </Border>
+        </Grid>
+
+    </StackPanel>
+
+</UserControl>

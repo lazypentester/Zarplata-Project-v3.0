@@ -1,0 +1,19 @@
+C:\Users\glebg\Desktop\Учеба 4 курс 2 семестр\Диплом\ДИПЛОМ\MyApiary\Hashing\bin\Debug\netstandard2.0\Hashing.deps.json
+C:\Users\glebg\Desktop\Учеба 4 курс 2 семестр\Диплом\ДИПЛОМ\MyApiary\Hashing\bin\Debug\netstandard2.0\Hashing.dll
+C:\Users\glebg\Desktop\Учеба 4 курс 2 семестр\Диплом\ДИПЛОМ\MyApiary\Hashing\bin\Debug\netstandard2.0\Hashing.pdb
+C:\Users\glebg\Desktop\Учеба 4 курс 2 семестр\Диплом\ДИПЛОМ\MyApiary\Hashing\obj\Debug\netstandard2.0\Hashing.AssemblyInfoInputs.cache
+C:\Users\glebg\Desktop\Учеба 4 курс 2 семестр\Диплом\ДИПЛОМ\MyApiary\Hashing\obj\Debug\netstandard2.0\Hashing.AssemblyInfo.cs
+C:\Users\glebg\Desktop\Учеба 4 курс 2 семестр\Диплом\ДИПЛОМ\MyApiary\Hashing\obj\Debug\netstandard2.0\Hashing.csproj.CoreCompileInputs.cache
+C:\Users\glebg\Desktop\Учеба 4 курс 2 семестр\Диплом\ДИПЛОМ\MyApiary\Hashing\obj\Debug\netstandard2.0\Hashing.dll
+C:\Users\glebg\Desktop\Учеба 4 курс 2 семестр\Диплом\ДИПЛОМ\MyApiary\Hashing\obj\Debug\netstandard2.0\Hashing.pdb
+C:\Users\glebg\Desktop\Учеба 4 курс 2 семестр\Диплом\ДИПЛОМ\MyApiary\Hashing\obj\Debug\netstandard2.0\Hashing.csprojAssemblyReference.cache
+C:\Users\glebg\source\repos\Zarplata Project v3.0\Hashing\bin\Debug\netstandard2.0\Hashing.deps.json
+C:\Users\glebg\source\repos\Zarplata Project v3.0\Hashing\bin\Debug\netstandard2.0\Hashing.dll
+C:\Users\glebg\source\repos\Zarplata Project v3.0\Hashing\bin\Debug\netstandard2.0\Hashing.pdb
+C:\Users\glebg\source\repos\Zarplata Project v3.0\Hashing\obj\Debug\netstandard2.0\Hashing.csproj.AssemblyReference.cache
+C:\Users\glebg\source\repos\Zarplata Project v3.0\Hashing\obj\Debug\netstandard2.0\Hashing.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\glebg\source\repos\Zarplata Project v3.0\Hashing\obj\Debug\netstandard2.0\Hashing.AssemblyInfoInputs.cache
+C:\Users\glebg\source\repos\Zarplata Project v3.0\Hashing\obj\Debug\netstandard2.0\Hashing.AssemblyInfo.cs
+C:\Users\glebg\source\repos\Zarplata Project v3.0\Hashing\obj\Debug\netstandard2.0\Hashing.csproj.CoreCompileInputs.cache
+C:\Users\glebg\source\repos\Zarplata Project v3.0\Hashing\obj\Debug\netstandard2.0\Hashing.dll
+C:\Users\glebg\source\repos\Zarplata Project v3.0\Hashing\obj\Debug\netstandard2.0\Hashing.pdb

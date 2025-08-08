@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "BotConsoleClient": {
+      "commandName": "Project",
+      "commandLineArgs": "--server-host http://localhost:5074"
+    }
+  }
+}

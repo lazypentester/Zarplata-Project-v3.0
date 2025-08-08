@@ -1,0 +1,11 @@
+C:\Users\glebg\source\repos\Zarplata Project v3.0\ClientOperationMessages\bin\Debug\net6.0\ClientOperationMessages.deps.json
+C:\Users\glebg\source\repos\Zarplata Project v3.0\ClientOperationMessages\bin\Debug\net6.0\ClientOperationMessages.dll
+C:\Users\glebg\source\repos\Zarplata Project v3.0\ClientOperationMessages\bin\Debug\net6.0\ClientOperationMessages.pdb
+C:\Users\glebg\source\repos\Zarplata Project v3.0\ClientOperationMessages\obj\Debug\net6.0\ClientOperationMessages.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\glebg\source\repos\Zarplata Project v3.0\ClientOperationMessages\obj\Debug\net6.0\ClientOperationMessages.AssemblyInfoInputs.cache
+C:\Users\glebg\source\repos\Zarplata Project v3.0\ClientOperationMessages\obj\Debug\net6.0\ClientOperationMessages.AssemblyInfo.cs
+C:\Users\glebg\source\repos\Zarplata Project v3.0\ClientOperationMessages\obj\Debug\net6.0\ClientOperationMessages.csproj.CoreCompileInputs.cache
+C:\Users\glebg\source\repos\Zarplata Project v3.0\ClientOperationMessages\obj\Debug\net6.0\ClientOperationMessages.dll
+C:\Users\glebg\source\repos\Zarplata Project v3.0\ClientOperationMessages\obj\Debug\net6.0\refint\ClientOperationMessages.dll
+C:\Users\glebg\source\repos\Zarplata Project v3.0\ClientOperationMessages\obj\Debug\net6.0\ClientOperationMessages.pdb
+C:\Users\glebg\source\repos\Zarplata Project v3.0\ClientOperationMessages\obj\Debug\net6.0\ref\ClientOperationMessages.dll

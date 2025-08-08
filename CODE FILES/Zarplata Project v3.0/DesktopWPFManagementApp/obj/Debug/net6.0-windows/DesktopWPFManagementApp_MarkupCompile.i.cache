@@ -1,0 +1,20 @@
+﻿DesktopWPFManagementApp
+1.0.0.0
+
+winexe
+C#
+.cs
+C:\Users\glebg\source\repos\Zarplata Project v3.0\DesktopWPFManagementApp\obj\Debug\net6.0-windows\
+DesktopWPFManagementApp
+none
+false
+TRACE;DEBUG;NET;NET6_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
+C:\Users\glebg\source\repos\Zarplata Project v3.0\DesktopWPFManagementApp\App.xaml
+381013011315
+
+70-482122933
+2271805909077
+MVVM\View\CustomControls\Elements\AuthTextBoxUserControlView.xaml;MVVM\View\CustomControls\Elements\RoundedLabelWithIconUserControlView.xaml;MVVM\View\CustomControls\Elements\SearchBotsTextBoxUserControlView.xaml;MVVM\View\CustomControls\Elements\SearchEarnSiteTasksTextBoxUserControlView.xaml;MVVM\View\CustomControls\Panels\AnalyticsPanelUserControlView.xaml;MVVM\View\CustomControls\Panels\AuthPanelUserControlView.xaml;MVVM\View\CustomControls\Panels\BotsPanelUserControlView.xaml;MVVM\View\CustomControls\Panels\ConnectErrorUserControlView.xaml;MVVM\View\CustomControls\Panels\LoadPanelUserControlView.xaml;MVVM\View\CustomControls\Panels\ProfilePanelUserControlView.xaml;MVVM\View\CustomControls\Panels\SettingsPanelUserControlView.xaml;MVVM\View\CustomControls\Panels\TasksPanelSubpanels\BotManagementTasksPanelUserControlView.xaml;MVVM\View\CustomControls\Panels\TasksPanelSubpanels\BotManagementTasksSettingsPanelUserControlView.xaml;MVVM\View\CustomControls\Panels\TasksPanelSubpanels\CaptchaTasksPanelUserControlView.xaml;MVVM\View\CustomControls\Panels\TasksPanelSubpanels\CaptchaTasksSettingsPanelUserControlView.xaml;MVVM\View\CustomControls\Panels\TasksPanelSubpanels\EarnSiteTasksPanelUserControlView.xaml;MVVM\View\CustomControls\Panels\TasksPanelSubpanels\EarnSiteTasksSettingsPanelUserControlView.xaml;MVVM\View\CustomControls\Panels\TasksPanelSubpanels\ProxyTasksPanelUserControlView.xaml;MVVM\View\CustomControls\Panels\TasksPanelSubpanels\ProxyTasksSettingsPanelUserControlView.xaml;MVVM\View\CustomControls\Panels\TasksPanelUserControlView.xaml;MVVM\View\Windows\AuthWindow.xaml;MVVM\View\Windows\MainWindow.xaml;Styles\DefaultButtonStyle.xaml;Styles\DefaultCheckBoxStyle.xaml;Styles\DefaultComboBoxStyle.xaml;Styles\DefaultCopyIconButtonStyle.xaml;Styles\DefaultDataGridStyle.xaml;Styles\DefaultIconButtonStyle.xaml;Styles\DefaultPageButtonStyle.xaml;Styles\DefaultScrollBarStyle.xaml;Styles\DefaultTempPopUpStyle.xaml;Styles\IconResourceDictionary.xaml;Styles\MainMenuButtonStyle.xaml;Styles\MenuProfileButtonStyle.xaml;Styles\RoundedLabelStyle.xaml;Styles\TaskTypeMenuButtonStyle.xaml;Styles\WindowControlButtonStyle.xaml;Themes\DarkTheme.xaml;
+
+False
+

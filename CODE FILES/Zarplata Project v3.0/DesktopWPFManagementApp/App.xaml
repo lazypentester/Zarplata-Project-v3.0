@@ -1,0 +1,84 @@
+﻿<Application x:Class="DesktopWPFManagementApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:DesktopWPFManagementApp" 
+             xmlns:panels="clr-namespace:DesktopWPFManagementApp.MVVM.View.CustomControls.Panels"
+             xmlns:tasksSubpanels="clr-namespace:DesktopWPFManagementApp.MVVM.View.CustomControls.Panels.TasksPanelSubpanels"
+             xmlns:viewModels="clr-namespace:DesktopWPFManagementApp.MVVM.ViewModel.CustomControls"
+             xmlns:tasksSubviewModels="clr-namespace:DesktopWPFManagementApp.MVVM.ViewModel.CustomControls.TasksPanelSubpanels"
+             Startup="ApplicationStart" ShutdownMode="OnMainWindowClose">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/DarkTheme.xaml" />
+                <ResourceDictionary Source="Styles/MainMenuButtonStyle.xaml" />
+                <ResourceDictionary Source="Styles/TaskTypeMenuButtonStyle.xaml" />
+                <ResourceDictionary Source="Styles/WindowControlButtonStyle.xaml" />
+                <ResourceDictionary Source="Styles/MenuProfileButtonStyle.xaml" />
+                <ResourceDictionary Source="Styles/DefaultButtonStyle.xaml" />
+                <ResourceDictionary Source="Styles/DefaultDataGridStyle.xaml" />
+                <ResourceDictionary Source="Styles/DefaultCheckBoxStyle.xaml" />
+                <ResourceDictionary Source="Styles/RoundedLabelStyle.xaml" />
+                <ResourceDictionary Source="Styles/IconResourceDictionary.xaml" />
+                <ResourceDictionary Source="Styles/DefaultScrollBarStyle.xaml" />
+                <ResourceDictionary Source="Styles/DefaultCopyIconButtonStyle.xaml" />
+                <ResourceDictionary Source="Styles/DefaultComboBoxStyle.xaml" />
+                <ResourceDictionary Source="Styles/DefaultIconButtonStyle.xaml" />
+                <ResourceDictionary Source="Styles/DefaultPageButtonStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- Main Panels -->
+            <DataTemplate DataType="{x:Type viewModels:AuthPanelUserControlViewModel}">
+                <panels:AuthPanelUserControlView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:ConnectErrorUserControlViewModel}">
+                <panels:ConnectErrorUserControlView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:LoadPanelUserControlViewModel}">
+                <panels:LoadPanelUserControlView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:AnalyticsPanelUserControlViewModel}">
+                <panels:AnalyticsPanelUserControlView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:TasksPanelUserControlViewModel}">
+                <panels:TasksPanelUserControlView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:BotsPanelUserControlViewModel}">
+                <panels:BotsPanelUserControlView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:SettingsPanelUserControlViewModel}">
+                <panels:SettingsPanelUserControlView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:ProfilePanelUserControlViewModel}">
+                <panels:ProfilePanelUserControlView />
+            </DataTemplate>
+            
+            <!-- Tasks subPanels -->
+            <DataTemplate DataType="{x:Type tasksSubviewModels:EarnSiteTasksPanelUserControlViewModel}">
+                <tasksSubpanels:EarnSiteTasksPanelUserControlView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type tasksSubviewModels:EarnSiteTasksSettingsPanelUserControlViewModel}">
+                <tasksSubpanels:EarnSiteTasksSettingsPanelUserControlView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type tasksSubviewModels:ProxyTasksPanelUserControlViewModel}">
+                <tasksSubpanels:ProxyTasksPanelUserControlView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type tasksSubviewModels:ProxyTasksSettingsPanelUserControlViewModel}">
+                <tasksSubpanels:ProxyTasksSettingsPanelUserControlView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type tasksSubviewModels:BotManagementTasksPanelUserControlViewModel}">
+                <tasksSubpanels:BotManagementTasksPanelUserControlView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type tasksSubviewModels:BotManagementTasksSettingsPanelUserControlViewModel}">
+                <tasksSubpanels:BotManagementTasksSettingsPanelUserControlView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type tasksSubviewModels:CaptchaTasksPanelUserControlViewModel}">
+                <tasksSubpanels:CaptchaTasksPanelUserControlView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type tasksSubviewModels:CaptchaTasksSettingsPanelUserControlViewModel}">
+                <tasksSubpanels:CaptchaTasksSettingsPanelUserControlView />
+            </DataTemplate>
+            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

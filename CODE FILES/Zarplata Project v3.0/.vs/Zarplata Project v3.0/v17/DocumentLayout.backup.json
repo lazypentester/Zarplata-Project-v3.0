@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\glebg\\source\\repos\\Zarplata Project v3.0\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E19DD8C4-160A-49EB-952C-3932DEE3A58A}|ProxyCombiner\\ProxyCombiner.csproj|c:\\users\\glebg\\source\\repos\\zarplata project v3.0\\proxycombiner\\classes\\internal\\selectivetask\\parse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E19DD8C4-160A-49EB-952C-3932DEE3A58A}|ProxyCombiner\\ProxyCombiner.csproj|solutionrelative:proxycombiner\\classes\\internal\\selectivetask\\parse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDEC8B49-B979-426B-B7F6-6DE296CD3F58}|CommonModels\\CommonModels.csproj|c:\\users\\glebg\\source\\repos\\zarplata project v3.0\\commonmodels\\client\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDEC8B49-B979-426B-B7F6-6DE296CD3F58}|CommonModels\\CommonModels.csproj|solutionrelative:commonmodels\\client\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDEC8B49-B979-426B-B7F6-6DE296CD3F58}|CommonModels\\CommonModels.csproj|c:\\users\\glebg\\source\\repos\\zarplata project v3.0\\commonmodels\\client\\interfaces\\iresourcemanage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDEC8B49-B979-426B-B7F6-6DE296CD3F58}|CommonModels\\CommonModels.csproj|solutionrelative:commonmodels\\client\\interfaces\\iresourcemanage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Parse.cs",
+              "DocumentMoniker": "C:\\Users\\glebg\\source\\repos\\Zarplata Project v3.0\\ProxyCombiner\\Classes\\Internal\\SelectiveTask\\Parse.cs",
+              "RelativeDocumentMoniker": "ProxyCombiner\\Classes\\Internal\\SelectiveTask\\Parse.cs",
+              "ToolTip": "C:\\Users\\glebg\\source\\repos\\Zarplata Project v3.0\\ProxyCombiner\\Classes\\Internal\\SelectiveTask\\Parse.cs",
+              "RelativeToolTip": "ProxyCombiner\\Classes\\Internal\\SelectiveTask\\Parse.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwHcBAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T13:01:17.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Client.cs",
+              "DocumentMoniker": "C:\\Users\\glebg\\source\\repos\\Zarplata Project v3.0\\CommonModels\\Client\\Client.cs",
+              "RelativeDocumentMoniker": "CommonModels\\Client\\Client.cs",
+              "ToolTip": "C:\\Users\\glebg\\source\\repos\\Zarplata Project v3.0\\CommonModels\\Client\\Client.cs",
+              "RelativeToolTip": "CommonModels\\Client\\Client.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAowIkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T12:56:48.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IResourceManage.cs",
+              "DocumentMoniker": "C:\\Users\\glebg\\source\\repos\\Zarplata Project v3.0\\CommonModels\\Client\\Interfaces\\IResourceManage.cs",
+              "RelativeDocumentMoniker": "CommonModels\\Client\\Interfaces\\IResourceManage.cs",
+              "ToolTip": "C:\\Users\\glebg\\source\\repos\\Zarplata Project v3.0\\CommonModels\\Client\\Interfaces\\IResourceManage.cs",
+              "RelativeToolTip": "CommonModels\\Client\\Interfaces\\IResourceManage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T12:54:47.385Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

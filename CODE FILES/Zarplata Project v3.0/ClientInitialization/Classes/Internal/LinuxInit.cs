@@ -1,0 +1,79 @@
+﻿using CommonModels.Client;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+using static ClientInitialization.Classes.Public.InitDelegates;
+using static CommonModels.Client.Machine;
+
+namespace ClientInitialization.Classes.Internal
+{
+    internal class LinuxInit : Init
+    {
+        public LinuxInit(IEnumerable<string> appParams, Client client, PrintMessage printMessageMethods, Platform OSPlatform = Platform.Linux, string OSPlatformText = nameof(Platform.Linux)) : base(appParams, client, printMessageMethods, OSPlatform, OSPlatformText)
+        {
+        }
+
+        internal override List<KeyValuePair<string, string?>> CollectIdentityKeyData()
+        {
+            List<KeyValuePair<string, string?>> result = new List<KeyValuePair<string, string?>>();
+
+            result.Add(new KeyValuePair<string, string?>("MASHINE_NAME", System.Environment.MachineName));
+            result.Add(new KeyValuePair<string, string?>("IS_64_BIT_OPERATING_SYSTEM", System.Environment.Is64BitOperatingSystem.ToString()));
+            result.Add(new KeyValuePair<string, string?>("OS_VERSION_Platform", System.Environment.OSVersion.Platform.ToString()));
+            result.Add(new KeyValuePair<string, string?>("OS_VERSION_VersionString", System.Environment.OSVersion.VersionString));
+            result.Add(new KeyValuePair<string, string?>("OS_VERSION_ServicePack", System.Environment.OSVersion.ServicePack));
+            result.Add(new KeyValuePair<string, string?>("OS_VERSION_Version_Build", System.Environment.OSVersion.Version.Build.ToString()));
+            result.Add(new KeyValuePair<string, string?>("OS_VERSION_Version_Major", System.Environment.OSVersion.Version.Major.ToString()));
+            result.Add(new KeyValuePair<string, string?>("OS_VERSION_Minor", System.Environment.OSVersion.Version.Minor.ToString()));
+            result.Add(new KeyValuePair<string, string?>("OS_VERSION_MinorRevision", System.Environment.OSVersion.Version.MinorRevision.ToString()));
+            result.Add(new KeyValuePair<string, string?>("OS_VERSION_Revision", System.Environment.OSVersion.Version.Revision.ToString()));
+            result.Add(new KeyValuePair<string, string?>("PROCESSOR_COUNT", System.Environment.ProcessorCount.ToString()));
+            result.Add(new KeyValuePair<string, string?>("USER_NAME", System.Environment.UserName));
+            result.Add(new KeyValuePair<string, string?>("USER_DOMAIN_NAME", System.Environment.UserDomainName));
+                                                      
+            result.Add(new KeyValuePair<string, string?>("OSDescription", RuntimeInformation.OSDescription));
+            result.Add(new KeyValuePair<string, string?>("OSArchitecture", RuntimeInformation.OSArchitecture.ToString()));
+            result.Add(new KeyValuePair<string, string?>("ProcessArchitecture", RuntimeInformation.ProcessArchitecture.ToString()));
+                                                      
+            //result.Add(new KeyValuePair<string, string?>("SystemPageSize", Environment.SystemPageSize.ToString()));
+
+            // get network interfaces
+            var adapters = System.Net.NetworkInformation.NetworkInterface.GetAllNetworkInterfaces();
+            foreach (var adapter in adapters)
+            {
+                if (adapter.NetworkInterfaceType == System.Net.NetworkInformation.NetworkInterfaceType.Ethernet ||
+                    adapter.NetworkInterfaceType == System.Net.NetworkInformation.NetworkInterfaceType.Ethernet3Megabit ||
+                    adapter.NetworkInterfaceType == System.Net.NetworkInformation.NetworkInterfaceType.FastEthernetFx ||
+                    adapter.NetworkInterfaceType == System.Net.NetworkInformation.NetworkInterfaceType.FastEthernetT ||
+                    adapter.NetworkInterfaceType == System.Net.NetworkInformation.NetworkInterfaceType.GigabitEthernet
+                    )
+                {
+                    string adapterInfo = GetAdapterInfo(adapter);
+
+                    result.Add(new KeyValuePair<string, string?>("NETWORK_INTERFACE_ETHERNET", adapterInfo));
+                }
+                else if (adapter.NetworkInterfaceType == System.Net.NetworkInformation.NetworkInterfaceType.Wireless80211)
+                {
+                    string adapterInfo = GetAdapterInfo(adapter);
+
+                    result.Add(new KeyValuePair<string, string?>("NETWORK_INTERFACE_WIRELESS80211", adapterInfo));
+                }
+            }
+
+            return result;
+        }
+
+        private string GetAdapterInfo(System.Net.NetworkInformation.NetworkInterface adapter)
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            stringBuilder.Append(adapter.Id);
+            stringBuilder.Append(adapter.Name);
+            stringBuilder.Append(adapter.GetPhysicalAddress().ToString());
+
+            return stringBuilder.ToString();
+        }
+    }
+}

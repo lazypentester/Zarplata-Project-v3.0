@@ -1,0 +1,709 @@
+﻿<UserControl x:Class="DesktopWPFManagementApp.MVVM.View.CustomControls.Panels.TasksPanelUserControlView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DesktopWPFManagementApp.MVVM.View.CustomControls.Panels"
+             xmlns:fontawesome="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+             mc:Ignorable="d" 
+             d:DesignHeight="560" d:DesignWidth="1200"
+             Name="root">
+
+    <UserControl.Resources>
+
+        <LinearGradientBrush x:Key="SilverMetalicGradientDefaultBackground" StartPoint="0, 0" EndPoint="1, 1">
+            <GradientStop Color="#A8A9AD" Offset="0.0"/>
+            <GradientStop Color="#B4B5B8" Offset="0.10"/>
+            <GradientStop Color="#C0C0C3" Offset="0.20"/>
+            <GradientStop Color="#CBCCCD" Offset="0.30"/>
+            <GradientStop Color="#D7D7D8" Offset="0.60"/>
+            <GradientStop Color="#E3E3E3" Offset="0.90"/>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="SilverMetalicGradientLeftBtnSelectedBackground" StartPoint="0, 0" EndPoint="1, 1">
+            <GradientStop Color="#5965f8" Offset="0.0"/>
+            <GradientStop Color="#535ce6" Offset="0.10"/>
+            <GradientStop Color="#4d53d3" Offset="0.25"/>
+            <GradientStop Color="#4749c1" Offset="0.35"/>
+            <GradientStop Color="#4140af" Offset="0.45"/>
+            <GradientStop Color="#3b379c" Offset="0.55"/>
+            <GradientStop Color="#352e8a" Offset="0.65"/>
+            <GradientStop Color="#2f2478" Offset="0.70"/>
+            <GradientStop Color="#291b65" Offset="0.80"/>
+            <GradientStop Color="#231253" Offset="0.90"/>
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="SilverMetalicGradientRightBtnSelectedBackground" StartPoint="0, 0" EndPoint="0.50, 1">
+            <GradientStop Color="#231253" Offset="0.0"/>
+            <GradientStop Color="#291b65" Offset="0.10"/>
+            <GradientStop Color="#2f2478" Offset="0.25"/>
+            <GradientStop Color="#352e8a" Offset="0.35"/>
+            <GradientStop Color="#3b379c" Offset="0.45"/>
+            <GradientStop Color="#4140af" Offset="0.55"/>
+            <GradientStop Color="#4749c1" Offset="0.65"/>
+            <GradientStop Color="#4d53d3" Offset="0.70"/>
+            <GradientStop Color="#535ce6" Offset="0.80"/>
+            <GradientStop Color="#5965f8" Offset="0.90"/>
+        </LinearGradientBrush>
+
+    </UserControl.Resources>
+    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--#region Main Menu  -->
+        <Grid
+            Grid.Row="0"
+            Background="#1F2145">
+
+            <StackPanel 
+                Orientation="Horizontal" 
+                FlowDirection="LeftToRight">
+
+                <Border
+                    Name="TaskTypeMenuRadioButton_EarnSite"
+                    Margin="10"
+                    CornerRadius="5"
+                    Cursor="Hand">
+
+                    <Border.Style>
+                        <Style TargetType="Border">
+                            <Style.Setters>
+                                <Setter Property="Background" Value="{DynamicResource SilverMetalicGradientDefaultBackground}"/>
+                            </Style.Setters>
+                        </Style>
+                    </Border.Style>
+
+                    <StackPanel Orientation="Horizontal">
+
+                        <Border
+                            CornerRadius="5 0 0 5">
+                            
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Style.Setters>
+                                        <Setter Property="Background" Value="Transparent"/>
+                                    </Style.Setters>
+
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding ElementName=TaskTypeMenuRadioButton_EarnSiteTasks, Path=IsChecked}" Value="True">
+                                            <DataTrigger.Setters>
+                                                <Setter Property="Background" Value="{DynamicResource SilverMetalicGradientLeftBtnSelectedBackground}"/>
+                                            </DataTrigger.Setters>
+                                        </DataTrigger>
+
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+
+                            <RadioButton
+                                        Name="TaskTypeMenuRadioButton_EarnSiteTasks"
+                                        GroupName="TaskTypeMenuButton"
+                                        Style="{StaticResource TaskTypeMenuBtnDefaultStyle}"
+                                        Margin="0 0 5 0"
+                                Command="{Binding openEarnSiteTasksPanelCommand}"
+                                IsChecked="True">
+
+                                <StackPanel Orientation="Horizontal">
+
+                                    <Image
+                                                Source="{StaticResource PlatformIconImg}"
+                                                Width="15"
+                                                Height="Auto"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                Margin="5 0 0 0"/>
+
+                                    <TextBlock 
+                                                Text="Earning Site"
+                                                FontSize="13"
+                                                Margin="5 0 0 0"
+                                                VerticalAlignment="Center"
+                                                HorizontalAlignment="Left">
+
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Style.Setters>
+                                                    <Setter Property="Foreground" Value="#210042"/>
+                                                </Style.Setters>
+
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=RadioButton, Mode=FindAncestor}, Path=IsChecked}" Value="True">
+                                                        <DataTrigger.Setters>
+                                                            <Setter Property="Foreground" Value="LightGray"/>
+                                                        </DataTrigger.Setters>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+
+                                    </TextBlock>
+
+                                </StackPanel>
+
+                            </RadioButton>
+                            
+                        </Border>
+
+                        <Border
+                                        Width="1"
+                                        Height="20">
+
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Style.Setters>
+                                        <Setter Property="Background" Value="DarkGray"/>
+                                    </Style.Setters>
+
+                                    <Style.Triggers>
+
+                                        <DataTrigger Binding="{Binding ElementName=TaskTypeMenuRadioButton_EarnSiteTasks, Path=IsChecked}" Value="True">
+                                            <DataTrigger.Setters>
+                                                <Setter Property="Visibility" Value="Collapsed" />
+                                            </DataTrigger.Setters>
+                                        </DataTrigger>
+
+                                        <DataTrigger Binding="{Binding ElementName=TaskTypeMenuRadioButton_EarnSiteTasksSettins, Path=IsChecked}" Value="True">
+                                            <DataTrigger.Setters>
+                                                <Setter Property="Visibility" Value="Collapsed" />
+                                            </DataTrigger.Setters>
+                                        </DataTrigger>
+
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+
+                        </Border>
+
+                        <Border
+                            CornerRadius="0 5 5 0">
+
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Style.Setters>
+                                        <Setter Property="Background" Value="Transparent"/>
+                                    </Style.Setters>
+
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding ElementName=TaskTypeMenuRadioButton_EarnSiteTasksSettins, Path=IsChecked}" Value="True">
+                                            <DataTrigger.Setters>
+                                                <Setter Property="Background" Value="{DynamicResource SilverMetalicGradientRightBtnSelectedBackground}"/>
+                                            </DataTrigger.Setters>
+                                        </DataTrigger>
+
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+
+                            <RadioButton
+                                        Name="TaskTypeMenuRadioButton_EarnSiteTasksSettins"
+                                        GroupName="TaskTypeMenuButton"
+                                        Style="{StaticResource TaskTypeMenuBtnDefaultStyle}"
+                                        Margin="5 0 0 0"
+                                Command="{Binding openEarnSiteTasksSettingsPanelCommand}">
+
+                                <Image
+                                                                    Source="{StaticResource TaskTypeSettingBtnIconImg}"
+                                                                    Width="20"
+                                                                    Height="Auto"
+                                                                    HorizontalAlignment="Center"
+                                                                    VerticalAlignment="Center"
+                                Margin="0 0 5 0"/>
+
+                            </RadioButton>
+                            
+                        </Border>
+
+                    </StackPanel>
+                    
+                </Border>
+
+                <Border
+                    Name="TaskTypeMenuRadioButton_Proxy"
+                    Margin="5 10 10 10"
+                    CornerRadius="5"
+                    Cursor="Hand">
+
+                    <Border.Style>
+                        <Style TargetType="Border">
+                            <Style.Setters>
+                                <Setter Property="Background" Value="{DynamicResource SilverMetalicGradientDefaultBackground}"/>
+                            </Style.Setters>
+                        </Style>
+                    </Border.Style>
+
+                    <StackPanel Orientation="Horizontal">
+
+                        <Border
+                            CornerRadius="5 0 0 5">
+
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Style.Setters>
+                                        <Setter Property="Background" Value="Transparent"/>
+                                    </Style.Setters>
+
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding ElementName=TaskTypeMenuRadioButton_ProxyTasks, Path=IsChecked}" Value="True">
+                                            <DataTrigger.Setters>
+                                                <Setter Property="Background" Value="{DynamicResource SilverMetalicGradientLeftBtnSelectedBackground}"/>
+                                            </DataTrigger.Setters>
+                                        </DataTrigger>
+
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+
+                            <RadioButton
+                                        Name="TaskTypeMenuRadioButton_ProxyTasks"
+                                        GroupName="TaskTypeMenuButton"
+                                        Style="{StaticResource TaskTypeMenuBtnDefaultStyle}"
+                                Margin="0 0 5 0"
+                                Command="{Binding openProxyTasksPanelCommand}">
+
+                                <StackPanel Orientation="Horizontal">
+
+                                    <Image
+                                                Source="{StaticResource ProxyIconImg}"
+                                                Width="15"
+                                                Height="Auto"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                Margin="5 0 0 0"/>
+
+                                    <TextBlock 
+                                                Text="Proxy"
+                                                FontSize="13"
+                                                Margin="5 0 0 0"
+                                                VerticalAlignment="Center"
+                                                HorizontalAlignment="Left">
+
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Style.Setters>
+                                                    <Setter Property="Foreground" Value="#210042"/>
+                                                </Style.Setters>
+
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=RadioButton, Mode=FindAncestor}, Path=IsChecked}" Value="True">
+                                                        <DataTrigger.Setters>
+                                                            <Setter Property="Foreground" Value="LightGray"/>
+                                                        </DataTrigger.Setters>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+
+                                    </TextBlock>
+
+                                </StackPanel>
+
+                            </RadioButton>
+
+                        </Border>
+
+                        <Border
+                                        Width="1"
+                                        Height="20">
+
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Style.Setters>
+                                        <Setter Property="Background" Value="DarkGray"/>
+                                    </Style.Setters>
+
+                                    <Style.Triggers>
+
+                                        <DataTrigger Binding="{Binding ElementName=TaskTypeMenuRadioButton_ProxyTasks, Path=IsChecked}" Value="True">
+                                            <DataTrigger.Setters>
+                                                <Setter Property="Visibility" Value="Collapsed" />
+                                            </DataTrigger.Setters>
+                                        </DataTrigger>
+
+                                        <DataTrigger Binding="{Binding ElementName=TaskTypeMenuRadioButton_ProxyTasksSettins, Path=IsChecked}" Value="True">
+                                            <DataTrigger.Setters>
+                                                <Setter Property="Visibility" Value="Collapsed" />
+                                            </DataTrigger.Setters>
+                                        </DataTrigger>
+
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+
+                        </Border>
+
+                        <Border
+                            CornerRadius="0 5 5 0">
+
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Style.Setters>
+                                        <Setter Property="Background" Value="Transparent"/>
+                                    </Style.Setters>
+
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding ElementName=TaskTypeMenuRadioButton_ProxyTasksSettins, Path=IsChecked}" Value="True">
+                                            <DataTrigger.Setters>
+                                                <Setter Property="Background" Value="{DynamicResource SilverMetalicGradientRightBtnSelectedBackground}"/>
+                                            </DataTrigger.Setters>
+                                        </DataTrigger>
+
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+
+                            <RadioButton
+                                        Name="TaskTypeMenuRadioButton_ProxyTasksSettins"
+                                        GroupName="TaskTypeMenuButton"
+                                        Style="{StaticResource TaskTypeMenuBtnDefaultStyle}"
+                                Margin="5 0 0 0"
+                                Command="{Binding openProxyTasksSettingsPanelCommand}">
+
+                                <Image
+                                                                    Source="{StaticResource TaskTypeSettingBtnIconImg}"
+                                                                    Width="20"
+                                                                    Height="Auto"
+                                                                    HorizontalAlignment="Center"
+                                                                    VerticalAlignment="Center"
+                                Margin="0 0 5 0"/>
+
+                            </RadioButton>
+                        </Border>
+
+                    </StackPanel>
+
+                </Border>
+
+                <Border
+                    Name="TaskTypeMenuRadioButton_BotManagement"
+                    Margin="5 10 10 10"
+                    CornerRadius="5"
+                    Cursor="Hand">
+
+                    <Border.Style>
+                        <Style TargetType="Border">
+                            <Style.Setters>
+                                <Setter Property="Background" Value="{DynamicResource SilverMetalicGradientDefaultBackground}"/>
+                            </Style.Setters>
+                        </Style>
+                    </Border.Style>
+
+                    <StackPanel Orientation="Horizontal">
+
+                        <Border
+                            CornerRadius="5 0 0 5">
+
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Style.Setters>
+                                        <Setter Property="Background" Value="Transparent"/>
+                                    </Style.Setters>
+
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding ElementName=TaskTypeMenuRadioButton_BotManagementTasks, Path=IsChecked}" Value="True">
+                                            <DataTrigger.Setters>
+                                                <Setter Property="Background" Value="{DynamicResource SilverMetalicGradientLeftBtnSelectedBackground}"/>
+                                            </DataTrigger.Setters>
+                                        </DataTrigger>
+
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+
+                            <RadioButton
+                                        Name="TaskTypeMenuRadioButton_BotManagementTasks"
+                                        GroupName="TaskTypeMenuButton"
+                                        Style="{StaticResource TaskTypeMenuBtnDefaultStyle}"
+                                Margin="0 0 5 0"
+                                Command="{Binding openBotManagementTasksPanelCommand}">
+
+                                <StackPanel Orientation="Horizontal">
+
+                                    <Image
+                                                Source="{StaticResource ManageIconImg}"
+                                                Width="15"
+                                                Height="Auto"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                Margin="5 0 0 0"/>
+
+                                    <TextBlock 
+                                                Text="Bot Management"
+                                                FontSize="13"
+                                                Margin="5 0 0 0"
+                                                VerticalAlignment="Center"
+                                                HorizontalAlignment="Left">
+
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Style.Setters>
+                                                    <Setter Property="Foreground" Value="#210042"/>
+                                                </Style.Setters>
+
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=RadioButton, Mode=FindAncestor}, Path=IsChecked}" Value="True">
+                                                        <DataTrigger.Setters>
+                                                            <Setter Property="Foreground" Value="LightGray"/>
+                                                        </DataTrigger.Setters>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+
+                                    </TextBlock>
+
+                                </StackPanel>
+
+                            </RadioButton>
+
+                        </Border>
+
+                        <Border
+                                        Width="1"
+                                        Height="20">
+
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Style.Setters>
+                                        <Setter Property="Background" Value="DarkGray"/>
+                                    </Style.Setters>
+
+                                    <Style.Triggers>
+
+                                        <DataTrigger Binding="{Binding ElementName=TaskTypeMenuRadioButton_BotManagementTasks, Path=IsChecked}" Value="True">
+                                            <DataTrigger.Setters>
+                                                <Setter Property="Visibility" Value="Collapsed" />
+                                            </DataTrigger.Setters>
+                                        </DataTrigger>
+
+                                        <DataTrigger Binding="{Binding ElementName=TaskTypeMenuRadioButton_BotManagementTasksSettins, Path=IsChecked}" Value="True">
+                                            <DataTrigger.Setters>
+                                                <Setter Property="Visibility" Value="Collapsed" />
+                                            </DataTrigger.Setters>
+                                        </DataTrigger>
+
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+
+                        </Border>
+
+                        <Border
+                            CornerRadius="0 5 5 0">
+
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Style.Setters>
+                                        <Setter Property="Background" Value="Transparent"/>
+                                    </Style.Setters>
+
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding ElementName=TaskTypeMenuRadioButton_BotManagementTasksSettins, Path=IsChecked}" Value="True">
+                                            <DataTrigger.Setters>
+                                                <Setter Property="Background" Value="{DynamicResource SilverMetalicGradientRightBtnSelectedBackground}"/>
+                                            </DataTrigger.Setters>
+                                        </DataTrigger>
+
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+
+                            <RadioButton
+                                        Name="TaskTypeMenuRadioButton_BotManagementTasksSettins"
+                                        GroupName="TaskTypeMenuButton"
+                                        Style="{StaticResource TaskTypeMenuBtnDefaultStyle}"
+                                Margin="5 0 0 0"
+                                Command="{Binding openBotManagementTasksSettingsPanelCommand}">
+
+                                <Image
+                                                                    Source="{StaticResource TaskTypeSettingBtnIconImg}"
+                                                                    Width="20"
+                                                                    Height="Auto"
+                                                                    HorizontalAlignment="Center"
+                                                                    VerticalAlignment="Center"
+                                Margin="0 0 5 0"/>
+
+                            </RadioButton>
+                        </Border>
+
+                    </StackPanel>
+
+                </Border>
+
+                <Border
+                    Name="TaskTypeMenuRadioButton_Captcha"
+                    Margin="5 10 10 10"
+                    CornerRadius="5"
+                    Cursor="Hand">
+
+                    <Border.Style>
+                        <Style TargetType="Border">
+                            <Style.Setters>
+                                <Setter Property="Background" Value="{DynamicResource SilverMetalicGradientDefaultBackground}"/>
+                            </Style.Setters>
+                        </Style>
+                    </Border.Style>
+
+                    <StackPanel Orientation="Horizontal">
+
+                        <Border
+                            CornerRadius="5 0 0 5">
+
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Style.Setters>
+                                        <Setter Property="Background" Value="Transparent"/>
+                                    </Style.Setters>
+
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding ElementName=TaskTypeMenuRadioButton_CaptchaTasks, Path=IsChecked}" Value="True">
+                                            <DataTrigger.Setters>
+                                                <Setter Property="Background" Value="{DynamicResource SilverMetalicGradientLeftBtnSelectedBackground}"/>
+                                            </DataTrigger.Setters>
+                                        </DataTrigger>
+
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+
+                            <RadioButton
+                                        Name="TaskTypeMenuRadioButton_CaptchaTasks"
+                                        GroupName="TaskTypeMenuButton"
+                                        Style="{StaticResource TaskTypeMenuBtnDefaultStyle}"
+                                Margin="0 0 5 0"
+                                Command="{Binding openCaptchaTasksPanelCommand}">
+
+                                <StackPanel Orientation="Horizontal">
+
+                                    <Image
+                                                Source="{StaticResource TaskTypeCaptchaBtnIconImg}"
+                                                Width="15"
+                                                Height="Auto"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                Margin="5 0 0 0"/>
+
+                                    <TextBlock 
+                                                Text="Captcha"
+                                                FontSize="13"
+                                                Margin="5 0 0 0"
+                                                VerticalAlignment="Center"
+                                                HorizontalAlignment="Left">
+
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Style.Setters>
+                                                    <Setter Property="Foreground" Value="#210042"/>
+                                                </Style.Setters>
+
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=RadioButton, Mode=FindAncestor}, Path=IsChecked}" Value="True">
+                                                        <DataTrigger.Setters>
+                                                            <Setter Property="Foreground" Value="LightGray"/>
+                                                        </DataTrigger.Setters>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+
+                                    </TextBlock>
+
+                                </StackPanel>
+
+                            </RadioButton>
+
+                        </Border>
+
+                        <Border
+                                        Width="1"
+                                        Height="20">
+
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Style.Setters>
+                                        <Setter Property="Background" Value="DarkGray"/>
+                                    </Style.Setters>
+
+                                    <Style.Triggers>
+
+                                        <DataTrigger Binding="{Binding ElementName=TaskTypeMenuRadioButton_CaptchaTasks, Path=IsChecked}" Value="True">
+                                            <DataTrigger.Setters>
+                                                <Setter Property="Visibility" Value="Collapsed" />
+                                            </DataTrigger.Setters>
+                                        </DataTrigger>
+
+                                        <DataTrigger Binding="{Binding ElementName=TaskTypeMenuRadioButton_CaptchaTasks, Path=IsChecked}" Value="True">
+                                            <DataTrigger.Setters>
+                                                <Setter Property="Visibility" Value="Collapsed" />
+                                            </DataTrigger.Setters>
+                                        </DataTrigger>
+
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+
+                        </Border>
+
+                        <Border
+                            CornerRadius="0 5 5 0">
+
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Style.Setters>
+                                        <Setter Property="Background" Value="Transparent"/>
+                                    </Style.Setters>
+
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding ElementName=TaskTypeMenuRadioButton_CaptchaTasksSettins, Path=IsChecked}" Value="True">
+                                            <DataTrigger.Setters>
+                                                <Setter Property="Background" Value="{DynamicResource SilverMetalicGradientRightBtnSelectedBackground}"/>
+                                            </DataTrigger.Setters>
+                                        </DataTrigger>
+
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+
+                            <RadioButton
+                                        Name="TaskTypeMenuRadioButton_CaptchaTasksSettins"
+                                        GroupName="TaskTypeMenuButton"
+                                        Style="{StaticResource TaskTypeMenuBtnDefaultStyle}"
+                                Margin="5 0 0 0"
+                                Command="{Binding openCaptchaTasksSettingsPanelCommand}">
+
+                                <Image
+                                                                    Source="{StaticResource TaskTypeSettingBtnIconImg}"
+                                                                    Width="20"
+                                                                    Height="Auto"
+                                                                    HorizontalAlignment="Center"
+                                                                    VerticalAlignment="Center"
+                                Margin="0 0 5 0"/>
+
+                            </RadioButton>
+                        </Border>
+
+                    </StackPanel>
+
+                </Border>
+
+            </StackPanel>
+
+        </Grid>
+        <!--#endregion End Main Menu -->
+
+        <!--#region Main Content | Child Views -->
+        <ContentControl
+            Grid.Row="1"
+            HorizontalContentAlignment="Stretch"
+            VerticalContentAlignment="Stretch"
+            Content="{Binding CurrentChildView}"
+            Margin="0"
+            Focusable="False"/>
+        <!--#endregion Main Content | Child Views -->
+
+    </Grid>
+    
+</UserControl>

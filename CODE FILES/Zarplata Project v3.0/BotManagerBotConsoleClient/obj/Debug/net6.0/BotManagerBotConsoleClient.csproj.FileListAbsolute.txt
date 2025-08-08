@@ -1,0 +1,14 @@
+C:\Users\glebg\source\repos\Zarplata Project v3.0\BotManagerBotConsoleClient\bin\Debug\net6.0\BotManagerBotConsoleClient.exe
+C:\Users\glebg\source\repos\Zarplata Project v3.0\BotManagerBotConsoleClient\bin\Debug\net6.0\BotManagerBotConsoleClient.deps.json
+C:\Users\glebg\source\repos\Zarplata Project v3.0\BotManagerBotConsoleClient\bin\Debug\net6.0\BotManagerBotConsoleClient.runtimeconfig.json
+C:\Users\glebg\source\repos\Zarplata Project v3.0\BotManagerBotConsoleClient\bin\Debug\net6.0\BotManagerBotConsoleClient.dll
+C:\Users\glebg\source\repos\Zarplata Project v3.0\BotManagerBotConsoleClient\bin\Debug\net6.0\BotManagerBotConsoleClient.pdb
+C:\Users\glebg\source\repos\Zarplata Project v3.0\BotManagerBotConsoleClient\obj\Debug\net6.0\BotManagerBotConsoleClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\glebg\source\repos\Zarplata Project v3.0\BotManagerBotConsoleClient\obj\Debug\net6.0\BotManagerBotConsoleClient.AssemblyInfoInputs.cache
+C:\Users\glebg\source\repos\Zarplata Project v3.0\BotManagerBotConsoleClient\obj\Debug\net6.0\BotManagerBotConsoleClient.AssemblyInfo.cs
+C:\Users\glebg\source\repos\Zarplata Project v3.0\BotManagerBotConsoleClient\obj\Debug\net6.0\BotManagerBotConsoleClient.csproj.CoreCompileInputs.cache
+C:\Users\glebg\source\repos\Zarplata Project v3.0\BotManagerBotConsoleClient\obj\Debug\net6.0\BotManagerBotConsoleClient.dll
+C:\Users\glebg\source\repos\Zarplata Project v3.0\BotManagerBotConsoleClient\obj\Debug\net6.0\refint\BotManagerBotConsoleClient.dll
+C:\Users\glebg\source\repos\Zarplata Project v3.0\BotManagerBotConsoleClient\obj\Debug\net6.0\BotManagerBotConsoleClient.pdb
+C:\Users\glebg\source\repos\Zarplata Project v3.0\BotManagerBotConsoleClient\obj\Debug\net6.0\BotManagerBotConsoleClient.genruntimeconfig.cache
+C:\Users\glebg\source\repos\Zarplata Project v3.0\BotManagerBotConsoleClient\obj\Debug\net6.0\ref\BotManagerBotConsoleClient.dll

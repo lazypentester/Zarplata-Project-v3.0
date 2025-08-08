@@ -1,0 +1,281 @@
+﻿<Window x:Class="DesktopWPFManagementApp.MVVM.View.Windows.AuthWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DesktopWPFManagementApp.MVVM.View.Windows"
+        xmlns:fontawesome="http://schemas.awesome.incremented/wpf/xaml/fontawesome.sharp"
+        xmlns:windows="clr-namespace:DesktopWPFManagementApp.MVVM.ViewModel.Windows"
+        mc:Ignorable="d"
+        Title="AuthWindow" Height="280" Width="480"
+        MinHeight="280" 
+        MinWidth="480"
+        WindowStyle="None"
+        ResizeMode="CanResizeWithGrip"
+        Background="Transparent"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen"
+        KeyboardNavigation.TabNavigation="Cycle">
+
+    <Window.DataContext>
+        <windows:AuthWindowViewModel/>
+    </Window.DataContext>
+
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVosibility" />
+    </Window.Resources>
+
+    <Window.Visibility>
+        <Binding Path="IsViewVisible" Mode="TwoWay" Converter="{StaticResource BooleanToVosibility}" />
+    </Window.Visibility>
+
+    <Border
+        x:Name="AuthWindowMainBorder"
+        Background="{StaticResource DefaultBackgroundAuthWindowColor}"
+        CornerRadius="5"
+        Margin="5">
+
+        <Border.Style>
+            <Style TargetType="Border">
+                <Style.Setters>
+                    <Setter Property="BorderThickness" Value="0 0 0 0"/>
+                    <Setter Property="BorderBrush" Value="Transparent"/>
+                </Style.Setters>
+
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding ServerConnectStatus}" Value="SuccessfullyConnected" >
+                        <DataTrigger.Setters>
+                            <Setter Property="BorderBrush" Value="{DynamicResource SuccessConnectServerStatusBorderColor}"/>
+                        </DataTrigger.Setters>
+                        
+                        <DataTrigger.EnterActions>
+                            <BeginStoryboard x:Name="AuthWindowMainBorderConnectSuccessBeginStoryboard">
+                                <Storyboard>
+                                    <ThicknessAnimationUsingKeyFrames
+                                        Storyboard.TargetProperty="BorderThickness"
+                                        BeginTime="0:0:0.0"
+                                        Duration="0:0:0.200" 
+                                        AutoReverse="True"
+                                        RepeatBehavior="2x">
+
+                                        <SplineThicknessKeyFrame KeyTime="0:0:0.000" Value="0 0 0 0" />
+                                        <SplineThicknessKeyFrame KeyTime="0:0:0.200" Value="5 5 5 5" />
+
+                                    </ThicknessAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </DataTrigger.EnterActions>
+                        <DataTrigger.ExitActions>
+                            <StopStoryboard BeginStoryboardName="AuthWindowMainBorderConnectSuccessBeginStoryboard" />
+                        </DataTrigger.ExitActions>
+                    </DataTrigger>
+
+                    <DataTrigger Binding="{Binding ServerConnectStatus}" Value="ConnectError" >
+                        <DataTrigger.Setters>
+                            <Setter Property="BorderBrush" Value="{DynamicResource ErrorConnectServerStatusBorderColor}"/>
+                        </DataTrigger.Setters>
+
+                        <DataTrigger.EnterActions>
+                            <BeginStoryboard x:Name="AuthWindowMainBorderConnectErrorBeginStoryboard">
+                                <Storyboard>
+                                    <ThicknessAnimationUsingKeyFrames
+                                        Storyboard.TargetProperty="BorderThickness"
+                                        BeginTime="0:0:0.0"
+                                        Duration="0:0:0.200" 
+                                        AutoReverse="True"
+                                        RepeatBehavior="2x">
+
+                                        <SplineThicknessKeyFrame KeyTime="0:0:0.000" Value="0 0 0 0" />
+                                        <SplineThicknessKeyFrame KeyTime="0:0:0.200" Value="5 5 5 5" />
+
+                                    </ThicknessAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </DataTrigger.EnterActions>
+                        <DataTrigger.ExitActions>
+                            <StopStoryboard BeginStoryboardName="AuthWindowMainBorderConnectErrorBeginStoryboard" />
+                        </DataTrigger.ExitActions>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </Border.Style>
+        
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!--#region control drag panel -->
+            <Border 
+                Grid.Row="0"
+                Background="Transparent"
+                CornerRadius="5,5,0,0"
+                Opacity="1"
+                KeyboardNavigation.TabNavigation="None">
+
+                <DockPanel
+                    x:Name="dragPanelBar"
+                    Background="Transparent"
+                    MouseLeftButtonDown="dragPanelBar_MouseLeftButtonDown"
+                    MouseEnter="dragPanelBar_MouseEnter">
+
+                    <!--#region Logo -->
+                    <StackPanel 
+                        x:Name="Logo"
+                        Grid.Column="0"
+                        Orientation="Horizontal"
+                        FlowDirection="LeftToRight"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        DockPanel.Dock="Left">
+
+                        <TextBlock 
+                            x:Name="LogoTextBlockZ"
+                            Text="Z"
+                            Foreground="White"
+                            Background="{StaticResource DefaultPrimaryButtonColor}"
+                            FontSize="14"
+                            FontWeight="ExtraBold"
+                            FontStyle="Normal"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left"
+                            Margin="10 0 0 0"
+                            Width="20"
+                            Height="20"
+                            TextAlignment="Center">
+
+                            <TextBlock.Clip>
+                                <RectangleGeometry 
+                                    RadiusX="5"
+                                    RadiusY="5"
+                                    Rect="0,0,20,20">
+                                </RectangleGeometry>
+                            </TextBlock.Clip>
+                        </TextBlock>
+
+                        <TextBlock 
+                            x:Name="LogoTextBlockLast"
+                            Text="Зарплата"
+                            Foreground="White"
+                            Background="Transparent"
+                            FontSize="14"
+                            FontWeight="Bold"
+                            FontStyle="Normal"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left"
+                            Margin="5 0 0 0"
+                            Width="Auto"
+                            Height="20"
+                            TextAlignment="Center">
+                        </TextBlock>
+                    </StackPanel>
+
+                    <!-- Еще можно было сделать так:
+                                    <Border 
+                        CornerRadius="5"
+                        Width="30"
+                        Height="30"
+                        Background="{StaticResource PrimaryButtonColor}">
+
+                        <TextBlock
+                            Text="Z"
+                            Foreground="White"
+                            Background="Transparent"
+                            FontSize="20"
+                            FontWeight="ExtraBold"
+                            FontStyle="Normal"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left"
+                            Margin="0 0 0 0"
+                            Width="30"
+                            Height="30"
+                            TextAlignment="Center">
+
+                        </TextBlock>
+                        
+                    </Border>
+                -->
+                    <!--#endregion End Logo -->
+
+                    <!--#region control buttons -->
+                    <StackPanel
+                        x:Name="ControlButtons"
+                        Grid.Column="1"
+                        Orientation="Horizontal"
+                        FlowDirection="RightToLeft"
+                        HorizontalAlignment="Right"
+                        Margin="0,0,5,0"
+                        DockPanel.Dock="Right">
+
+                        <Button
+                            x:Name="ButtonCloseApp"
+                            Click="ButtonCloseApp_Click"
+                            Width="30"
+                            Height="30"
+                            Style="{StaticResource WindowControlBtnStyle}">
+
+                            <fontawesome:IconImage 
+                                Icon="Xmark" 
+                                Foreground="{DynamicResource DefaultForegroundWindowControlButtonIconColor}"
+                                Height="15"
+                                Width="15" />
+
+                        </Button>
+
+                        <Button
+                            x:Name="ButtonMaximizeApp"
+                            Click="ButtonMaximizeApp_Click"
+                            Width="30"
+                            Height="30"
+                            Style="{StaticResource WindowControlBtnStyle}">
+
+                            <fontawesome:IconImage 
+                                Icon="WindowMaximize" 
+                                Foreground="{DynamicResource DefaultForegroundWindowControlButtonIconColor}"
+                                Height="15"
+                                Width="15" />
+
+                        </Button>
+
+                        <Button
+                            x:Name="ButtonMinimizeApp"
+                            Click="ButtonMinimizeApp_Click"
+                            Width="30"
+                            Height="30"
+                            Style="{StaticResource WindowControlBtnStyle}">
+
+                            <fontawesome:IconImage 
+                                Icon="WindowMinimize" 
+                                Foreground="{DynamicResource DefaultForegroundWindowControlButtonIconColor}"
+                                Height="15"
+                                Width="15" />
+
+                        </Button>
+
+                    </StackPanel>
+                    <!--#endregion control buttons -->
+
+                </DockPanel>
+
+            </Border>
+            <!--#endregion control drag panel -->
+
+            <!--#region Main Content | Child Views -->
+            <ContentControl
+                Grid.Row="1"
+                Content="{Binding CurrentChildView}"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Margin="5"
+                Focusable="False">
+                
+            </ContentControl>
+            <!--#endregion Main Content | Child Views -->
+
+        </Grid>
+
+    </Border>
+
+</Window>

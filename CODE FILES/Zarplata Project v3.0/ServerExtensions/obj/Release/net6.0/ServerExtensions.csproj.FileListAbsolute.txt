@@ -1,0 +1,12 @@
+C:\Users\glebg\source\repos\Zarplata Project v3.0\ServerExtensions\bin\Release\net6.0\ServerExtensions.deps.json
+C:\Users\glebg\source\repos\Zarplata Project v3.0\ServerExtensions\bin\Release\net6.0\ServerExtensions.dll
+C:\Users\glebg\source\repos\Zarplata Project v3.0\ServerExtensions\bin\Release\net6.0\ServerExtensions.pdb
+C:\Users\glebg\source\repos\Zarplata Project v3.0\ServerExtensions\obj\Release\net6.0\ServerExtensions.csproj.AssemblyReference.cache
+C:\Users\glebg\source\repos\Zarplata Project v3.0\ServerExtensions\obj\Release\net6.0\ServerExtensions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\glebg\source\repos\Zarplata Project v3.0\ServerExtensions\obj\Release\net6.0\ServerExtensions.AssemblyInfoInputs.cache
+C:\Users\glebg\source\repos\Zarplata Project v3.0\ServerExtensions\obj\Release\net6.0\ServerExtensions.AssemblyInfo.cs
+C:\Users\glebg\source\repos\Zarplata Project v3.0\ServerExtensions\obj\Release\net6.0\ServerExtensions.csproj.CoreCompileInputs.cache
+C:\Users\glebg\source\repos\Zarplata Project v3.0\ServerExtensions\obj\Release\net6.0\ServerExtensions.dll
+C:\Users\glebg\source\repos\Zarplata Project v3.0\ServerExtensions\obj\Release\net6.0\refint\ServerExtensions.dll
+C:\Users\glebg\source\repos\Zarplata Project v3.0\ServerExtensions\obj\Release\net6.0\ServerExtensions.pdb
+C:\Users\glebg\source\repos\Zarplata Project v3.0\ServerExtensions\obj\Release\net6.0\ref\ServerExtensions.dll

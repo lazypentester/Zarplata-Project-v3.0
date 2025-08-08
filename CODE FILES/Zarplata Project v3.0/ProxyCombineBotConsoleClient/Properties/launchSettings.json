@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ProxyCombineBotConsoleClient": {
+      "commandName": "Project",
+      "commandLineArgs": "--server-host http://93.183.125.27"
+    }
+  }
+}

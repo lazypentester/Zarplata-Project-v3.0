@@ -1,0 +1,111 @@
+﻿<UserControl x:Class="DesktopWPFManagementApp.MVVM.View.CustomControls.Elements.RoundedLabelWithIconUserControlView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DesktopWPFManagementApp.MVVM.View.CustomControls.Elements"
+             mc:Ignorable="d"
+             Name="root">
+
+    <Label>
+        <Label.Style>
+            <Style 
+            TargetType="Label">
+                <Style.Setters>
+                    <Setter Property="Background" Value="Blue"/>
+                    <Setter Property="Content" Value="Label"/>
+                    <Setter Property="Foreground" Value="Aqua"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="Label">
+                                <Border
+                                    Name="MainBorder"
+                                    Height="auto"
+                                    Width="auto"
+                                    Background="{TemplateBinding Background}"
+                                    Padding="10 5 10 5"
+                                    CornerRadius="5">
+
+                                    <StackPanel 
+                                        Orientation="Horizontal">
+
+                                        <Image
+                                            x:Name="MainImg"
+                                            Source="{Binding Icon, ElementName=root}"
+                                            Width="{TemplateBinding FontSize}"
+                                            Height="{TemplateBinding FontSize}"
+                                            HorizontalAlignment="Left"
+                                            VerticalAlignment="Center"/>
+
+                                        <ContentControl 
+                                            Name="MainControl"
+                                            Content="{Binding Text, ElementName=root}"
+                                            Background="Transparent"
+                                            Foreground="{TemplateBinding Foreground}"
+                                            HorizontalAlignment="Left"
+                                            VerticalAlignment="Center"
+                                            FontSize="{TemplateBinding FontSize}"
+                                            FontWeight="Medium"
+                                            Margin="5 0 0 0">
+                                        </ContentControl>
+                                    </StackPanel>
+                                </Border>
+
+                                <ControlTemplate.Triggers>
+                                    <DataTrigger Binding="{Binding ElementName=MainControl, Path=Content}" Value="Windows">
+                                        <Setter TargetName="MainBorder" Property="Background" Value="#210042"/>
+                                        <Setter TargetName="MainControl" Property="Foreground" Value="Aqua"/>
+                                        <Setter TargetName="MainImg" Property="Source" Value="{StaticResource WindowsIconImg}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Text, ElementName=root}" Value="Linux">
+                                        <Setter TargetName="MainBorder" Property="Background" Value="#210042"/>
+                                        <Setter TargetName="MainControl" Property="Foreground" Value="Aqua"/>
+                                        <Setter TargetName="MainImg" Property="Source" Value="{StaticResource LinuxIconImg}"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Text, ElementName=root}" Value="MacOS">
+                                        <Setter TargetName="MainBorder" Property="Background" Value="#210042"/>
+                                        <Setter TargetName="MainControl" Property="Foreground" Value="Aqua"/>
+                                        <Setter TargetName="MainImg" Property="Source" Value="{StaticResource MacOSIconImg}"/>
+                                    </DataTrigger>
+
+                                    
+                                    <DataTrigger Binding="{Binding Text, ElementName=root}" Value="EarningSiteBot">
+                                        <Setter TargetName="MainBorder" Property="Background" Value="Aqua"/>
+                                        <Setter TargetName="MainControl" Property="Foreground" Value="#210042"/>
+                                        <Setter TargetName="MainImg" Property="Source" Value="{StaticResource PlatformIconImg}"/>
+                                        <Setter TargetName="MainControl" Property="Content" Value="Earning Site"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Text, ElementName=root}" Value="ProxyCombineBot">
+                                        <Setter TargetName="MainBorder" Property="Background" Value="Orange"/>
+                                        <Setter TargetName="MainControl" Property="Foreground" Value="#210042"/>
+                                        <Setter TargetName="MainImg" Property="Source" Value="{StaticResource ProxyIconImg}"/>
+                                        <Setter TargetName="MainControl" Property="Content" Value="Proxy"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Text, ElementName=root}" Value="BotManager">
+                                        <Setter TargetName="MainBorder" Property="Background" Value="#210042"/>
+                                        <Setter TargetName="MainControl" Property="Foreground" Value="Aqua"/>
+                                        <Setter TargetName="MainImg" Property="Source" Value="{StaticResource ManageIconImg}"/>
+                                        <Setter TargetName="MainControl" Property="Content" Value="Manage"/>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Text, ElementName=root}" Value="Текст">
+                                        <Setter TargetName="MainBorder" Property="Visibility" Value="Collapsed"/>
+                                    </DataTrigger>
+
+
+                                    <DataTrigger Binding="{Binding Text, ElementName=root}" Value="EarningSiteWork">
+                                        <Setter TargetName="MainBorder" Property="Background" Value="Aqua"/>
+                                        <Setter TargetName="MainControl" Property="Foreground" Value="#210042"/>
+                                        <Setter TargetName="MainImg" Property="Source" Value="{StaticResource PlatformIconImg}"/>
+                                        <Setter TargetName="MainControl" Property="Content" Value="Earning Site"/>
+                                    </DataTrigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style.Setters>
+            </Style>
+        </Label.Style>
+        
+    </Label>
+    
+</UserControl>

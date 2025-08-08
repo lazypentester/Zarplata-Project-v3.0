@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ConsoleManagementAppTEST": {
+      "commandName": "Project",
+      "commandLineArgs": "http://61ff-91-226-190-35.ngrok-free.app"
+    }
+  }
+}

@@ -1,0 +1,102 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+        <Style 
+            x:Key="RoundedLabelStyleOne"
+            TargetType="Label">
+        <Style.Setters>
+            <Setter Property="Background" Value="Aqua"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Label">
+                        <Border
+                                Name="MainBorder"
+                                Height="auto"
+                                Width="auto"
+                                Background="{TemplateBinding Background}"
+                                Padding="10 5 10 5"
+                                CornerRadius="5">
+
+                            <ContentControl 
+                                    Name="MainControl"
+                                    Content="{TemplateBinding Content}"
+                                    Foreground="{TemplateBinding Foreground}"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="{TemplateBinding FontSize}"
+                                    FontWeight="Medium">
+                            </ContentControl>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=MainControl, Path=Content}" Value="Free">
+                                <Setter TargetName="MainBorder" Property="Background" Value="Green"/>
+                                <Setter TargetName="MainControl" Property="Foreground" Value="White"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=MainControl, Path=Content}" Value="AtWork">
+                                <Setter TargetName="MainBorder" Property="Background" Value="Blue"/>
+                                <Setter TargetName="MainControl" Property="Foreground" Value="White"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=MainControl, Path=Content}" Value="Stopped">
+                                <Setter TargetName="MainBorder" Property="Background" Value="#696969"/>
+                                <Setter TargetName="MainControl" Property="Foreground" Value="White"/>
+                            </DataTrigger>
+
+
+                            <DataTrigger Binding="{Binding ElementName=MainControl, Path=Content}" Value="Bot">
+                                <Setter TargetName="MainBorder" Property="Background" Value="#845422"/>
+                                <Setter TargetName="MainControl" Property="Foreground" Value="White"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=MainControl, Path=Content}" Value="Management">
+                                <Setter TargetName="MainBorder" Property="Background" Value="#0892d0"/>
+                                <Setter TargetName="MainControl" Property="Foreground" Value="White"/>
+                            </DataTrigger>
+
+
+                            <DataTrigger Binding="{Binding ElementName=MainControl, Path=Content}" Value="Created">
+                                <Setter TargetName="MainBorder" Property="Background" Value="#ffffff"/>
+                                <Setter TargetName="MainControl" Property="Foreground" Value="Black"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=MainControl, Path=Content}" Value="Started">
+                                <Setter TargetName="MainBorder" Property="Background" Value="#dfd5fa"/>
+                                <Setter TargetName="MainControl" Property="Foreground" Value="Black"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=MainControl, Path=Content}" Value="WaitingForCheckAccountHistoryProxy">
+                                <Setter TargetName="MainBorder" Property="Background" Value="#bfacf5"/>
+                                <Setter TargetName="MainControl" Property="Foreground" Value="White"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=MainControl, Path=Content}" Value="WaitingForNewProxy">
+                                <Setter TargetName="MainBorder" Property="Background" Value="#a083f0"/>
+                                <Setter TargetName="MainControl" Property="Foreground" Value="White"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=MainControl, Path=Content}" Value="WaitingForCaptcha">
+                                <Setter TargetName="MainBorder" Property="Background" Value="#8059ea"/>
+                                <Setter TargetName="MainControl" Property="Foreground" Value="White"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=MainControl, Path=Content}" Value="Executing">
+                                <Setter TargetName="MainBorder" Property="Background" Value="#6030e5"/>
+                                <Setter TargetName="MainControl" Property="Foreground" Value="White"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=MainControl, Path=Content}" Value="Done">
+                                <Setter TargetName="MainBorder" Property="Background" Value="#4006e0"/>
+                                <Setter TargetName="MainControl" Property="Foreground" Value="White"/>
+                            </DataTrigger>
+
+
+                            <DataTrigger Binding="{Binding ElementName=MainControl, Path=Content}" Value="Success">
+                                <Setter TargetName="MainBorder" Property="Background" Value="Green"/>
+                                <Setter TargetName="MainControl" Property="Foreground" Value="White"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=MainControl, Path=Content}" Value="Error">
+                                <Setter TargetName="MainBorder" Property="Background" Value="Red"/>
+                                <Setter TargetName="MainControl" Property="Foreground" Value="White"/>
+                            </DataTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style.Setters>
+    </Style>
+
+</ResourceDictionary>

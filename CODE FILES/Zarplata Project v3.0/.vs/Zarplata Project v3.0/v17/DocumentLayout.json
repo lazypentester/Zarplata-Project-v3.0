@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\glebg\\source\\repos\\Zarplata Project v3.0\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{51CB6301-2E21-4C57-AD56-1F6A65A24F96}|ServerExtensions\\ServerExtensions.csproj|c:\\users\\glebg\\source\\repos\\zarplata project v3.0\\serverextensions\\httpcontextextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{51CB6301-2E21-4C57-AD56-1F6A65A24F96}|ServerExtensions\\ServerExtensions.csproj|solutionrelative:serverextensions\\httpcontextextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HttpContextExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\glebg\\source\\repos\\Zarplata Project v3.0\\ServerExtensions\\HttpContextExtensions.cs",
+              "RelativeDocumentMoniker": "ServerExtensions\\HttpContextExtensions.cs",
+              "ToolTip": "C:\\Users\\glebg\\source\\repos\\Zarplata Project v3.0\\ServerExtensions\\HttpContextExtensions.cs",
+              "RelativeToolTip": "ServerExtensions\\HttpContextExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-29T14:23:38.04Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

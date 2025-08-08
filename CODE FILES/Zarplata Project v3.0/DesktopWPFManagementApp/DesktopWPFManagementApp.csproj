@@ -1,0 +1,182 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Images\2keys.png" />
+    <None Remove="Resources\Images\3dlockyellow.png" />
+    <None Remove="Resources\Images\accesskey.png" />
+    <None Remove="Resources\Images\banblockicon.png" />
+    <None Remove="Resources\Images\bot.png" />
+    <None Remove="Resources\Images\bot2.png" />
+    <None Remove="Resources\Images\botdetailsinfoicon.png" />
+    <None Remove="Resources\Images\botdetailsinfoicon2.png" />
+    <None Remove="Resources\Images\captchaicon.png" />
+    <None Remove="Resources\Images\cleartexticon.png" />
+    <None Remove="Resources\Images\computer.png" />
+    <None Remove="Resources\Images\copyicon.png" />
+    <None Remove="Resources\Images\copyicon2.png" />
+    <None Remove="Resources\Images\copyIcon4.png" />
+    <None Remove="Resources\Images\datetime.png" />
+    <None Remove="Resources\Images\datetime2.png" />
+    <None Remove="Resources\Images\datetime3.png" />
+    <None Remove="Resources\Images\datetime4.png" />
+    <None Remove="Resources\Images\datetime5.png" />
+    <None Remove="Resources\Images\datetime6.png" />
+    <None Remove="Resources\Images\deletetrashicon.png" />
+    <None Remove="Resources\Images\deletetrashicon2.png" />
+    <None Remove="Resources\Images\deletetrashicon3.png" />
+    <None Remove="Resources\Images\globus.png" />
+    <None Remove="Resources\Images\globus2.png" />
+    <None Remove="Resources\Images\globus4.png" />
+    <None Remove="Resources\Images\globus5.png" />
+    <None Remove="Resources\Images\globus9.png" />
+    <None Remove="Resources\Images\id3.png" />
+    <None Remove="Resources\Images\image_default.png" />
+    <None Remove="Resources\Images\infoicon.png" />
+    <None Remove="Resources\Images\infoicon10.png" />
+    <None Remove="Resources\Images\infoicon2.png" />
+    <None Remove="Resources\Images\infoicon3.png" />
+    <None Remove="Resources\Images\infoicon4.png" />
+    <None Remove="Resources\Images\infoicon5.png" />
+    <None Remove="Resources\Images\infoicon6.png" />
+    <None Remove="Resources\Images\infoicon7.png" />
+    <None Remove="Resources\Images\infoicon8.png" />
+    <None Remove="Resources\Images\infoicon9.png" />
+    <None Remove="Resources\Images\ip.png" />
+    <None Remove="Resources\Images\key2.png" />
+    <None Remove="Resources\Images\linux2.png" />
+    <None Remove="Resources\Images\macos.png" />
+    <None Remove="Resources\Images\manage.png" />
+    <None Remove="Resources\Images\manage2.png" />
+    <None Remove="Resources\Images\managesettingsicon.png" />
+    <None Remove="Resources\Images\pauseboticon.png" />
+    <None Remove="Resources\Images\platform6.png" />
+    <None Remove="Resources\Images\proxy2.png" />
+    <None Remove="Resources\Images\ruble2.png" />
+    <None Remove="Resources\Images\ruble2_border.png" />
+    <None Remove="Resources\Images\ruble_border.png" />
+    <None Remove="Resources\Images\sessionexpiredicon.png" />
+    <None Remove="Resources\Images\startboticon.png" />
+    <None Remove="Resources\Images\stopboticon.png" />
+    <None Remove="Resources\Images\taskidicon.png" />
+    <None Remove="Resources\Images\tasktypesettingicon.png" />
+    <None Remove="Resources\Images\tasktypesettingicon2.png" />
+    <None Remove="Resources\Images\user.png" />
+    <None Remove="Resources\Images\user2.png" />
+    <None Remove="Resources\Images\user3.png" />
+    <None Remove="Resources\Images\windows.png" />
+    <None Remove="Resources\password.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Images\banblockicon.png" />
+    <Resource Include="Resources\Images\botdetailsinfoicon.png" />
+    <Resource Include="Resources\Images\botdetailsinfoicon2.png" />
+    <Resource Include="Resources\Images\captchaicon.png" />
+    <Resource Include="Resources\Images\cleartexticon.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Images\copyicon.png" />
+    <Resource Include="Resources\Images\copyicon2.png" />
+    <Resource Include="Resources\Images\copyIcon4.png" />
+    <Resource Include="Resources\Images\datetime3.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Images\computer.png" />
+    <Resource Include="Resources\Images\datetime.png" />
+    <Resource Include="Resources\Images\datetime2.png" />
+    <Resource Include="Resources\Images\datetime4.png" />
+    <Resource Include="Resources\Images\datetime5.png" />
+    <Resource Include="Resources\Images\datetime6.png" />
+    <Resource Include="Resources\Images\deletetrashicon.png" />
+    <Resource Include="Resources\Images\deletetrashicon2.png" />
+    <Resource Include="Resources\Images\deletetrashicon3.png" />
+    <Resource Include="Resources\Images\globus.png" />
+    <Resource Include="Resources\Images\globus2.png" />
+    <Resource Include="Resources\Images\globus4.png" />
+    <Resource Include="Resources\Images\globus5.png" />
+    <Resource Include="Resources\Images\globus9.png" />
+    <Resource Include="Resources\Images\image_default.png" />
+    <Resource Include="Resources\Images\infoicon.png" />
+    <Resource Include="Resources\Images\infoicon10.png" />
+    <Resource Include="Resources\Images\infoicon2.png" />
+    <Resource Include="Resources\Images\infoicon3.png" />
+    <Resource Include="Resources\Images\infoicon4.png" />
+    <Resource Include="Resources\Images\infoicon5.png" />
+    <Resource Include="Resources\Images\infoicon6.png" />
+    <Resource Include="Resources\Images\infoicon7.png" />
+    <Resource Include="Resources\Images\infoicon8.png" />
+    <Resource Include="Resources\Images\infoicon9.png" />
+    <Resource Include="Resources\Images\ip.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="MVVM\Model\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FontAwesome.Sharp" Version="6.3.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CommonModels\CommonModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Fonts\password.ttf" />
+    <Resource Include="Resources\Images\2keys.png" />
+    <Resource Include="Resources\Images\3dlockyellow.png" />
+    <Resource Include="Resources\Images\accesskey.png" />
+    <Resource Include="Resources\Images\bot.png" />
+    <Resource Include="Resources\Images\bot2.png" />
+    <Resource Include="Resources\Images\id3.png" />
+    <Resource Include="Resources\Images\key2.png" />
+    <Resource Include="Resources\Images\linux2.png" />
+    <Resource Include="Resources\Images\macos.png" />
+    <Resource Include="Resources\Images\manage.png" />
+    <Resource Include="Resources\Images\manage2.png" />
+    <Resource Include="Resources\Images\managesettingsicon.png" />
+    <Resource Include="Resources\Images\pauseboticon.png" />
+    <Resource Include="Resources\Images\platform6.png" />
+    <Resource Include="Resources\Images\proxy2.png" />
+    <Resource Include="Resources\Images\ruble2.png" />
+    <Resource Include="Resources\Images\ruble2_border.png" />
+    <Resource Include="Resources\Images\ruble_border.png" />
+    <Resource Include="Resources\Images\sessionexpiredicon.png" />
+    <Resource Include="Resources\Images\startboticon.png" />
+    <Resource Include="Resources\Images\stopboticon.png" />
+    <Resource Include="Resources\Images\taskidicon.png" />
+    <Resource Include="Resources\Images\tasktypesettingicon.png" />
+    <Resource Include="Resources\Images\tasktypesettingicon2.png" />
+    <Resource Include="Resources\Images\user.png" />
+    <Resource Include="Resources\Images\user2.png" />
+    <Resource Include="Resources\Images\user3.png" />
+    <Resource Include="Resources\Images\windows.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

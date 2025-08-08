@@ -1,0 +1,119 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <BitmapImage
+            x:Key="AuthPanelImg"
+            UriSource="pack://application:,,,/Resources/Images/2keys.png" >
+    </BitmapImage>
+    <BitmapImage
+            x:Key="UserIdImg"
+            UriSource="pack://application:,,,/Resources/Images/botdetailsinfoicon2.png" >
+    </BitmapImage>
+    <BitmapImage
+            x:Key="UniqueKeyImg"
+            UriSource="pack://application:,,,/Resources/Images/key2.png" >
+    </BitmapImage>
+    <BitmapImage
+            x:Key="UserIpImg"
+            UriSource="pack://application:,,,/Resources/Images/globus.png" >
+    </BitmapImage>
+    <BitmapImage
+            x:Key="UserMachineNameImg"
+            UriSource="pack://application:,,,/Resources/Images/computer.png" >
+    </BitmapImage>
+    <BitmapImage
+            x:Key="UserUserNameImg"
+            UriSource="pack://application:,,,/Resources/Images/user.png" >
+    </BitmapImage>
+    <BitmapImage
+            x:Key="LableDefaultIconImg"
+            UriSource="pack://application:,,,/Resources/Images/image_default.png" >
+    </BitmapImage>
+    <BitmapImage
+            x:Key="LinuxIconImg"
+            UriSource="pack://application:,,,/Resources/Images/linux2.png" >
+    </BitmapImage>
+    <BitmapImage
+            x:Key="WindowsIconImg"
+            UriSource="pack://application:,,,/Resources/Images/windows.png" >
+    </BitmapImage>
+    <BitmapImage
+            x:Key="MacOSIconImg"
+            UriSource="pack://application:,,,/Resources/Images/macos.png" >
+    </BitmapImage>
+    <BitmapImage
+            x:Key="ManageIconImg"
+            UriSource="pack://application:,,,/Resources/Images/manage2.png" >
+    </BitmapImage>
+    <BitmapImage
+            x:Key="PlatformIconImg"
+            UriSource="pack://application:,,,/Resources/Images/platform6.png" >
+    </BitmapImage>
+    <BitmapImage
+            x:Key="ProxyIconImg"
+            UriSource="pack://application:,,,/Resources/Images/proxy2.png" >
+    </BitmapImage>
+    <BitmapImage
+            x:Key="DatetimeIconImg"
+            UriSource="pack://application:,,,/Resources/Images/datetime3.png" >
+    </BitmapImage>
+    <BitmapImage
+            x:Key="CopyIconImg"
+            UriSource="pack://application:,,,/Resources/Images/copyicon4.png" >
+    </BitmapImage>
+    <BitmapImage
+            x:Key="InfoIconImg"
+            UriSource="pack://application:,,,/Resources/Images/infoicon.png" >
+    </BitmapImage>
+    <BitmapImage
+            x:Key="ManageSettingsIconImg"
+            UriSource="pack://application:,,,/Resources/Images/managesettingsicon.png" >
+    </BitmapImage>
+    <BitmapImage
+            x:Key="StopBotIconImg"
+            UriSource="pack://application:,,,/Resources/Images/stopboticon.png" >
+    </BitmapImage>
+    <BitmapImage
+            x:Key="StartBotIconImg"
+            UriSource="pack://application:,,,/Resources/Images/startboticon.png" >
+    </BitmapImage>
+    <BitmapImage
+            x:Key="DeleteTrashIconImg"
+            UriSource="pack://application:,,,/Resources/Images/deletetrashicon3.png" >
+    </BitmapImage>
+    <BitmapImage
+            x:Key="BlockBanIconImg"
+            UriSource="pack://application:,,,/Resources/Images/banblockicon.png" >
+    </BitmapImage>
+    <BitmapImage
+            x:Key="ClearTextIconImg"
+            UriSource="pack://application:,,,/Resources/Images/cleartexticon.png" >
+    </BitmapImage>
+    <BitmapImage
+            x:Key="BotDetailsInfoIconImg"
+            UriSource="pack://application:,,,/Resources/Images/botdetailsinfoicon2.png" >
+    </BitmapImage>
+    <BitmapImage
+            x:Key="RefreshExpiredSessionIconImg"
+            UriSource="pack://application:,,,/Resources/Images/sessionexpiredicon.png" >
+    </BitmapImage>
+
+    
+    
+    <BitmapImage
+            x:Key="TaskTypeSettingBtnIconImg"
+            UriSource="pack://application:,,,/Resources/Images/tasktypesettingicon2.png" >
+    </BitmapImage>
+    <BitmapImage
+            x:Key="TaskTypeCaptchaBtnIconImg"
+            UriSource="pack://application:,,,/Resources/Images/captchaicon.png" >
+    </BitmapImage>
+
+
+
+    <BitmapImage
+            x:Key="TaskIdIconImg"
+            UriSource="pack://application:,,,/Resources/Images/taskidicon.png" >
+    </BitmapImage>
+
+</ResourceDictionary>

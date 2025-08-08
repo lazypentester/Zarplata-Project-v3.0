@@ -1,0 +1,20 @@
+﻿DesktopWPFManagementApp
+
+
+winexe
+C#
+.cs
+C:\Users\glebg\source\repos\Zarplata Project v3.0\DesktopWPFManagementApp\obj\Release\net6.0-windows\win-x64\
+DesktopWPFManagementApp
+none
+false
+TRACE;RELEASE;NET;NET6_0;NETCOREAPP
+C:\Users\glebg\source\repos\Zarplata Project v3.0\DesktopWPFManagementApp\App.xaml
+10-1720479590
+
+21-1988668828
+227-1344206462
+MVVM\View\CustomControls\Elements\AuthTextBoxUserControlView.xaml;MVVM\View\CustomControls\Panels\AuthPanelUserControlView.xaml;MVVM\View\CustomControls\Panels\ConnectErrorUserControlView.xaml;MVVM\View\Windows\AuthWindow.xaml;MVVM\View\Windows\MainWindow.xaml;Styles\DefaultButtonStyle.xaml;Styles\MainMenuButtonStyle.xaml;Styles\MenuProfileButtonStyle.xaml;Styles\WindowControlButtonStyle.xaml;Themes\DarkTheme.xaml;
+
+False
+

@@ -1,0 +1,2341 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- Default Button Style -->
+    <Style
+        x:Key="DefaultBtnStyle"
+        BasedOn="{StaticResource {x:Type Button}}"
+        TargetType="Button">
+
+        <Style.Setters>
+            <Setter Property="Background" Value="{DynamicResource DefaultPrimaryButtonColor}" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontFamily" Value="Arial" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Content" Value="Текст" />
+            <Setter Property="HorizontalContentAlignment" Value="Center" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border
+                            Name="ButtonMainBorder"
+                            CornerRadius="5"
+                            Width="{TemplateBinding Width}"
+                            Height="{TemplateBinding Height}"
+                            Background="{TemplateBinding Background}">
+
+                            <Grid
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center">
+
+                                <Grid
+                                    Width="{TemplateBinding Width}"
+                                    Height="{TemplateBinding Height}">
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+
+                                    <Border Name="AGB1" Grid.Column="0" Grid.Row="0" BorderBrush="Transparent" BorderThickness="2 2 0 0" CornerRadius="5 0 0 0"/>
+                                    <Border Name="AGB1_BLUR" Grid.Column="0" Grid.Row="0" BorderBrush="Transparent" BorderThickness="4 4 0 0" CornerRadius="5 0 0 0">
+                                        <Border.Effect>
+                                            <BlurEffect Radius="40"/>
+                                        </Border.Effect>
+                                    </Border>
+                                    <Border Name="AGB2" Grid.Column="1" Grid.Row="0" BorderBrush="Transparent" BorderThickness="0 2 0 0" CornerRadius="0 0 0 0"/>
+                                    <Border Name="AGB2_BLUR" Grid.Column="1" Grid.Row="0" BorderBrush="Transparent" BorderThickness="0 4 0 0" CornerRadius="0 0 0 0">
+                                        <Border.Effect>
+                                            <BlurEffect Radius="40"/>
+                                        </Border.Effect>
+                                    </Border>
+                                    <Border Name="AGB3" Grid.Column="2" Grid.Row="0" BorderBrush="Transparent" BorderThickness="0 2 0 0" CornerRadius="0 0 0 0" />
+                                    <Border Name="AGB3_BLUR" Grid.Column="2" Grid.Row="0" BorderBrush="Transparent" BorderThickness="0 4 0 0" CornerRadius="0 0 0 0">
+                                        <Border.Effect>
+                                            <BlurEffect Radius="40"/>
+                                        </Border.Effect>
+                                    </Border>
+                                    <Border Name="AGB4" Grid.Column="3" Grid.Row="0" BorderBrush="Transparent" BorderThickness="0 2 0 0" CornerRadius="0 0 0 0"/>
+                                    <Border Name="AGB4_BLUR" Grid.Column="3" Grid.Row="0" BorderBrush="Transparent" BorderThickness="0 4 0 0" CornerRadius="0 0 0 0">
+                                        <Border.Effect>
+                                            <BlurEffect Radius="40"/>
+                                        </Border.Effect>
+                                    </Border>
+                                    <Border Name="AGB5" Grid.Column="4" Grid.Row="0" BorderBrush="Transparent" BorderThickness="0 2 0 0" CornerRadius="0 0 0 0"/>
+                                    <Border Name="AGB5_BLUR" Grid.Column="4" Grid.Row="0" BorderBrush="Transparent" BorderThickness="0 4 0 0" CornerRadius="0 0 0 0">
+                                        <Border.Effect>
+                                            <BlurEffect Radius="40"/>
+                                        </Border.Effect>
+                                    </Border>
+                                    <Border Name="AGB6" Grid.Column="5" Grid.Row="0" BorderBrush="Transparent" BorderThickness="0 2 2 0" CornerRadius="0 5 0 0"/>
+                                    <Border Name="AGB6_BLUR" Grid.Column="5" Grid.Row="0" BorderBrush="Transparent" BorderThickness="0 4 4 0" CornerRadius="0 5 0 0">
+                                        <Border.Effect>
+                                            <BlurEffect Radius="40"/>
+                                        </Border.Effect>
+                                    </Border>
+
+                                    <Border Name="AGB7" Grid.Column="5" Grid.Row="1" BorderBrush="Transparent" BorderThickness="0 0 2 0" CornerRadius="0 0 0 0"/>
+                                    <Border Name="AGB7_BLUR" Grid.Column="5" Grid.Row="1" BorderBrush="Transparent" BorderThickness="0 0 4 0" CornerRadius="0 0 0 0">
+                                        <Border.Effect>
+                                            <BlurEffect Radius="20"/>
+                                        </Border.Effect>
+                                    </Border>
+                                    <Border Name="AGB8" Grid.Column="5" Grid.Row="2" BorderBrush="Transparent" BorderThickness="0 0 2 0" CornerRadius="0 0 0 0"/>
+                                    <Border Name="AGB8_BLUR" Grid.Column="5" Grid.Row="2" BorderBrush="Transparent" BorderThickness="0 0 4 0" CornerRadius="0 0 0 0">
+                                        <Border.Effect>
+                                            <BlurEffect Radius="20"/>
+                                        </Border.Effect>
+                                    </Border>
+
+                                    <Border Name="AGB9" Grid.Column="5" Grid.Row="3" BorderBrush="Transparent" BorderThickness="0 0 2 2" CornerRadius="0 0 5 0"/>
+                                    <Border Name="AGB9_BLUR" Grid.Column="5" Grid.Row="3" BorderBrush="Transparent" BorderThickness="0 0 4 4" CornerRadius="0 0 5 0">
+                                        <Border.Effect>
+                                            <BlurEffect Radius="20"/>
+                                        </Border.Effect>
+                                    </Border>
+                                    <Border Name="AGB10" Grid.Column="4" Grid.Row="3" BorderBrush="Transparent" BorderThickness="0 0 0 2" CornerRadius="0 0 0 0"/>
+                                    <Border Name="AGB10_BLUR" Grid.Column="4" Grid.Row="3" BorderBrush="Transparent" BorderThickness="0 0 0 4" CornerRadius="0 0 0 0">
+                                        <Border.Effect>
+                                            <BlurEffect Radius="20"/>
+                                        </Border.Effect>
+                                    </Border>
+                                    <Border Name="AGB11" Grid.Column="3" Grid.Row="3" BorderBrush="Transparent" BorderThickness="0 0 0 2" CornerRadius="0 0 0 0"/>
+                                    <Border Name="AGB11_BLUR" Grid.Column="3" Grid.Row="3" BorderBrush="Transparent" BorderThickness="0 0 0 4" CornerRadius="0 0 0 0">
+                                        <Border.Effect>
+                                            <BlurEffect Radius="20"/>
+                                        </Border.Effect>
+                                    </Border>
+                                    <Border Name="AGB12" Grid.Column="2" Grid.Row="3" BorderBrush="Transparent" BorderThickness="0 0 0 2" CornerRadius="0 0 0 0"/>
+                                    <Border Name="AGB12_BLUR" Grid.Column="2" Grid.Row="3" BorderBrush="Transparent" BorderThickness="0 0 0 4" CornerRadius="0 0 0 0">
+                                        <Border.Effect>
+                                            <BlurEffect Radius="20"/>
+                                        </Border.Effect>
+                                    </Border>
+                                    <Border Name="AGB13" Grid.Column="1" Grid.Row="3" BorderBrush="Transparent" BorderThickness="0 0 0 2" CornerRadius="0 0 0 0"/>
+                                    <Border Name="AGB13_BLUR" Grid.Column="1" Grid.Row="3" BorderBrush="Transparent" BorderThickness="0 0 0 4" CornerRadius="0 0 0 0">
+                                        <Border.Effect>
+                                            <BlurEffect Radius="20"/>
+                                        </Border.Effect>
+                                    </Border>
+                                    <Border Name="AGB14" Grid.Column="0" Grid.Row="3" BorderBrush="Transparent" BorderThickness="2 0 0 2" CornerRadius="0 0 0 5"/>
+                                    <Border Name="AGB14_BLUR" Grid.Column="0" Grid.Row="3" BorderBrush="Transparent" BorderThickness="4 0 0 4" CornerRadius="0 0 0 5">
+                                        <Border.Effect>
+                                            <BlurEffect Radius="20"/>
+                                        </Border.Effect>
+                                    </Border>
+
+                                    <Border Name="AGB15" Grid.Column="0" Grid.Row="2" BorderBrush="Transparent" BorderThickness="2 0 0 0" CornerRadius="0 0 0 0"/>
+                                    <Border Name="AGB15_BLUR" Grid.Column="0" Grid.Row="2" BorderBrush="Transparent" BorderThickness="4 0 0 0" CornerRadius="0 0 0 0">
+                                        <Border.Effect>
+                                            <BlurEffect Radius="20"/>
+                                        </Border.Effect>
+                                    </Border>
+                                    <Border Name="AGB16" Grid.Column="0" Grid.Row="1" BorderBrush="Transparent" BorderThickness="2 0 0 0" CornerRadius="0 0 0 0"/>
+                                    <Border Name="AGB16_BLUR" Grid.Column="0" Grid.Row="1" BorderBrush="Transparent" BorderThickness="4 0 0 0" CornerRadius="0 0 0 0">
+                                        <Border.Effect>
+                                            <BlurEffect Radius="20"/>
+                                        </Border.Effect>
+                                    </Border>
+
+                                </Grid>
+
+                                <Grid
+                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+
+                                    <StackPanel
+                                        Orientation="Horizontal">
+
+                                        <ContentControl 
+                                            Name="ButtonContent"
+                                            Content="{TemplateBinding Property=Content}"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Visibility="Visible"/>
+
+                                    </StackPanel>
+
+                                </Grid>
+
+                            </Grid>
+                            
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Trigger.Setters>
+                                    <Setter Property="Background" Value="{DynamicResource HoverPrimaryButtonColor}" />
+                                </Trigger.Setters>
+
+                                <Trigger.EnterActions>
+                                    <!-- From Right Down Corner -->
+                                    <BeginStoryboard
+                                                        x:Name="AGB8_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB8"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB9_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB9"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB10_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB10"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB11_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB11"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <!-- From Right Up Corner -->
+                                    <BeginStoryboard
+                                                        x:Name="AGB7_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB7"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB6_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB6"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB5_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB5"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB4_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB4"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <!-- From Left Down Corner -->
+                                    <BeginStoryboard
+                                                        x:Name="AGB15_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB15"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB14_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB14"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB13_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB13"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB12_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB12"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <!-- From Left Up Corner -->
+                                    <BeginStoryboard
+                                                        x:Name="AGB16_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB16"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB1_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB1"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB2_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB2"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB3_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB3"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+
+                                    <!-- Blur From Right Down Corner -->
+                                    <BeginStoryboard
+                                                        x:Name="AGB8_BLUR_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB8_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB9_BLUR_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB9_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB10_BLUR_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB10_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB11_BLUR_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB11_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <!-- Blur From Right Up Corner -->
+                                    <BeginStoryboard
+                                                        x:Name="AGB7_BLUR_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB7_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB6_BLUR_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB6_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB5_BLUR_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB5_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB4_BLUR_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB4_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <!-- Blur From Left Down Corner -->
+                                    <BeginStoryboard
+                                                        x:Name="AGB15_BLUR_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB15_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB14_BLUR_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB14_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB13_BLUR_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB13_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB12_BLUR_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB12_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <!-- Blur From Left Up Corner -->
+                                    <BeginStoryboard
+                                                        x:Name="AGB16_BLUR_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB16_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB1_BLUR_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB1_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB2_BLUR_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB2_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB3_BLUR_SB_Enter">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB3_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+
+                                <Trigger.ExitActions>
+                                    <!-- From Right Down Corner -->
+                                    <BeginStoryboard
+                                                        x:Name="AGB11_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB11"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB10_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB10"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB9_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB9"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB8_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB8"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <!-- From Right Up Corner -->
+                                    <BeginStoryboard
+                                                        x:Name="AGB4_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB4"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB5_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB5"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB6_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB6"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB7_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB7"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <!-- From Left Down Corner -->
+                                    <BeginStoryboard
+                                                        x:Name="AGB12_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB12"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB13_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB13"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB14_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB14"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB15_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB15"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <!-- From Left Up Corner -->
+                                    <BeginStoryboard
+                                                        x:Name="AGB3_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB3"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB2_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB2"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB1_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB1"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB16_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB16"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+
+                                    <!-- Blur From Right Down Corner -->
+                                    <BeginStoryboard
+                                                        x:Name="AGB11_BLUR_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB11_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB10_BLUR_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB10_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB9_BLUR_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB9_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB8_BLUR_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB8_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <!-- Blur From Right Up Corner -->
+                                    <BeginStoryboard
+                                                        x:Name="AGB4_BLUR_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB4_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB5_BLUR_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB5_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB6_BLUR_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB6_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB7_BLUR_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB7_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <!-- Blur From Left Down Corner -->
+                                    <BeginStoryboard
+                                                        x:Name="AGB12_BLUR_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB12_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB13_BLUR_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB13_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB14_BLUR_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB14_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB15_BLUR_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB15_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <!-- Blur From Left Up Corner -->
+                                    <BeginStoryboard
+                                                        x:Name="AGB3_BLUR_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB3_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB2_BLUR_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB2_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB1_BLUR_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB1_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                    <BeginStoryboard
+                                                        x:Name="AGB16_BLUR_SB_Exit">
+                                        <Storyboard>
+                                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB16_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                                            </ColorAnimation>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.ExitActions>
+                            </Trigger>
+                            
+                            <Trigger Property="IsPressed" Value="True">
+                                <Trigger.Setters>
+                                    <Setter Property="Background" Value="{DynamicResource PressPrimaryButtonColor}" />
+                                </Trigger.Setters>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                        
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style.Setters>
+
+    </Style>
+
+    <!-- Default Button TemplateControl Style -->
+    <ControlTemplate x:Key="DefaultButtonTemplate" TargetType="Button">
+        <Border
+                            Name="ButtonMainBorder"
+                            CornerRadius="5"
+                            Width="{TemplateBinding Width}"
+                            Height="{TemplateBinding Height}"
+                            Background="{TemplateBinding Background}">
+
+            <Grid 
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center">
+
+                <Grid
+                    x:Name="ButtonBlurBorderGrid"
+                                    Width="{TemplateBinding Width}"
+                                    Height="{TemplateBinding Height}">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+
+                    <Border Name="AGB1" Grid.Column="0" Grid.Row="0" BorderBrush="Transparent" BorderThickness="2 2 0 0" CornerRadius="5 0 0 0"/>
+                    <Border Name="AGB1_BLUR" Grid.Column="0" Grid.Row="0" BorderBrush="Transparent" BorderThickness="4 4 0 0" CornerRadius="5 0 0 0">
+                        <Border.Effect>
+                            <BlurEffect Radius="40"/>
+                        </Border.Effect>
+                    </Border>
+                    <Border Name="AGB2" Grid.Column="1" Grid.Row="0" BorderBrush="Transparent" BorderThickness="0 2 0 0" CornerRadius="0 0 0 0"/>
+                    <Border Name="AGB2_BLUR" Grid.Column="1" Grid.Row="0" BorderBrush="Transparent" BorderThickness="0 4 0 0" CornerRadius="0 0 0 0">
+                        <Border.Effect>
+                            <BlurEffect Radius="40"/>
+                        </Border.Effect>
+                    </Border>
+                    <Border Name="AGB3" Grid.Column="2" Grid.Row="0" BorderBrush="Transparent" BorderThickness="0 2 0 0" CornerRadius="0 0 0 0" />
+                    <Border Name="AGB3_BLUR" Grid.Column="2" Grid.Row="0" BorderBrush="Transparent" BorderThickness="0 4 0 0" CornerRadius="0 0 0 0">
+                        <Border.Effect>
+                            <BlurEffect Radius="40"/>
+                        </Border.Effect>
+                    </Border>
+                    <Border Name="AGB4" Grid.Column="3" Grid.Row="0" BorderBrush="Transparent" BorderThickness="0 2 0 0" CornerRadius="0 0 0 0"/>
+                    <Border Name="AGB4_BLUR" Grid.Column="3" Grid.Row="0" BorderBrush="Transparent" BorderThickness="0 4 0 0" CornerRadius="0 0 0 0">
+                        <Border.Effect>
+                            <BlurEffect Radius="40"/>
+                        </Border.Effect>
+                    </Border>
+                    <Border Name="AGB5" Grid.Column="4" Grid.Row="0" BorderBrush="Transparent" BorderThickness="0 2 0 0" CornerRadius="0 0 0 0"/>
+                    <Border Name="AGB5_BLUR" Grid.Column="4" Grid.Row="0" BorderBrush="Transparent" BorderThickness="0 4 0 0" CornerRadius="0 0 0 0">
+                        <Border.Effect>
+                            <BlurEffect Radius="40"/>
+                        </Border.Effect>
+                    </Border>
+                    <Border Name="AGB6" Grid.Column="5" Grid.Row="0" BorderBrush="Transparent" BorderThickness="0 2 2 0" CornerRadius="0 5 0 0"/>
+                    <Border Name="AGB6_BLUR" Grid.Column="5" Grid.Row="0" BorderBrush="Transparent" BorderThickness="0 4 4 0" CornerRadius="0 5 0 0">
+                        <Border.Effect>
+                            <BlurEffect Radius="40"/>
+                        </Border.Effect>
+                    </Border>
+
+                    <Border Name="AGB7" Grid.Column="5" Grid.Row="1" BorderBrush="Transparent" BorderThickness="0 0 2 0" CornerRadius="0 0 0 0"/>
+                    <Border Name="AGB7_BLUR" Grid.Column="5" Grid.Row="1" BorderBrush="Transparent" BorderThickness="0 0 4 0" CornerRadius="0 0 0 0">
+                        <Border.Effect>
+                            <BlurEffect Radius="20"/>
+                        </Border.Effect>
+                    </Border>
+                    <Border Name="AGB8" Grid.Column="5" Grid.Row="2" BorderBrush="Transparent" BorderThickness="0 0 2 0" CornerRadius="0 0 0 0"/>
+                    <Border Name="AGB8_BLUR" Grid.Column="5" Grid.Row="2" BorderBrush="Transparent" BorderThickness="0 0 4 0" CornerRadius="0 0 0 0">
+                        <Border.Effect>
+                            <BlurEffect Radius="20"/>
+                        </Border.Effect>
+                    </Border>
+
+                    <Border Name="AGB9" Grid.Column="5" Grid.Row="3" BorderBrush="Transparent" BorderThickness="0 0 2 2" CornerRadius="0 0 5 0"/>
+                    <Border Name="AGB9_BLUR" Grid.Column="5" Grid.Row="3" BorderBrush="Transparent" BorderThickness="0 0 4 4" CornerRadius="0 0 5 0">
+                        <Border.Effect>
+                            <BlurEffect Radius="20"/>
+                        </Border.Effect>
+                    </Border>
+                    <Border Name="AGB10" Grid.Column="4" Grid.Row="3" BorderBrush="Transparent" BorderThickness="0 0 0 2" CornerRadius="0 0 0 0"/>
+                    <Border Name="AGB10_BLUR" Grid.Column="4" Grid.Row="3" BorderBrush="Transparent" BorderThickness="0 0 0 4" CornerRadius="0 0 0 0">
+                        <Border.Effect>
+                            <BlurEffect Radius="20"/>
+                        </Border.Effect>
+                    </Border>
+                    <Border Name="AGB11" Grid.Column="3" Grid.Row="3" BorderBrush="Transparent" BorderThickness="0 0 0 2" CornerRadius="0 0 0 0"/>
+                    <Border Name="AGB11_BLUR" Grid.Column="3" Grid.Row="3" BorderBrush="Transparent" BorderThickness="0 0 0 4" CornerRadius="0 0 0 0">
+                        <Border.Effect>
+                            <BlurEffect Radius="20"/>
+                        </Border.Effect>
+                    </Border>
+                    <Border Name="AGB12" Grid.Column="2" Grid.Row="3" BorderBrush="Transparent" BorderThickness="0 0 0 2" CornerRadius="0 0 0 0"/>
+                    <Border Name="AGB12_BLUR" Grid.Column="2" Grid.Row="3" BorderBrush="Transparent" BorderThickness="0 0 0 4" CornerRadius="0 0 0 0">
+                        <Border.Effect>
+                            <BlurEffect Radius="20"/>
+                        </Border.Effect>
+                    </Border>
+                    <Border Name="AGB13" Grid.Column="1" Grid.Row="3" BorderBrush="Transparent" BorderThickness="0 0 0 2" CornerRadius="0 0 0 0"/>
+                    <Border Name="AGB13_BLUR" Grid.Column="1" Grid.Row="3" BorderBrush="Transparent" BorderThickness="0 0 0 4" CornerRadius="0 0 0 0">
+                        <Border.Effect>
+                            <BlurEffect Radius="20"/>
+                        </Border.Effect>
+                    </Border>
+                    <Border Name="AGB14" Grid.Column="0" Grid.Row="3" BorderBrush="Transparent" BorderThickness="2 0 0 2" CornerRadius="0 0 0 5"/>
+                    <Border Name="AGB14_BLUR" Grid.Column="0" Grid.Row="3" BorderBrush="Transparent" BorderThickness="4 0 0 4" CornerRadius="0 0 0 5">
+                        <Border.Effect>
+                            <BlurEffect Radius="20"/>
+                        </Border.Effect>
+                    </Border>
+
+                    <Border Name="AGB15" Grid.Column="0" Grid.Row="2" BorderBrush="Transparent" BorderThickness="2 0 0 0" CornerRadius="0 0 0 0"/>
+                    <Border Name="AGB15_BLUR" Grid.Column="0" Grid.Row="2" BorderBrush="Transparent" BorderThickness="4 0 0 0" CornerRadius="0 0 0 0">
+                        <Border.Effect>
+                            <BlurEffect Radius="20"/>
+                        </Border.Effect>
+                    </Border>
+                    <Border Name="AGB16" Grid.Column="0" Grid.Row="1" BorderBrush="Transparent" BorderThickness="2 0 0 0" CornerRadius="0 0 0 0"/>
+                    <Border Name="AGB16_BLUR" Grid.Column="0" Grid.Row="1" BorderBrush="Transparent" BorderThickness="4 0 0 0" CornerRadius="0 0 0 0">
+                        <Border.Effect>
+                            <BlurEffect Radius="20"/>
+                        </Border.Effect>
+                    </Border>
+
+                </Grid>
+
+                <Grid
+                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+
+                    <StackPanel
+                                        Orientation="Horizontal">
+
+                        <ContentControl 
+                                            Name="ButtonContent"
+                                            Content="{TemplateBinding Property=Content}"
+                                            VerticalAlignment="Center"
+                                            HorizontalAlignment="Center"
+                                            Visibility="Visible"/>
+
+                    </StackPanel>
+
+                </Grid>
+
+            </Grid>
+
+        </Border>
+
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <!--<Trigger.Setters>
+                    <Setter Property="Background" Value="{DynamicResource HoverPrimaryButtonColor}" />
+                </Trigger.Setters>-->
+
+                <Trigger.EnterActions>
+                    <!-- From Right Down Corner -->
+                    <BeginStoryboard
+                                                        x:Name="AGB8_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB8"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB9_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB9"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB10_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB10"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB11_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB11"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <!-- From Right Up Corner -->
+                    <BeginStoryboard
+                                                        x:Name="AGB7_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB7"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB6_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB6"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB5_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB5"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB4_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB4"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <!-- From Left Down Corner -->
+                    <BeginStoryboard
+                                                        x:Name="AGB15_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB15"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB14_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB14"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB13_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB13"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB12_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB12"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <!-- From Left Up Corner -->
+                    <BeginStoryboard
+                                                        x:Name="AGB16_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB16"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB1_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB1"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB2_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB2"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB3_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB3"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+
+                    <!-- Blur From Right Down Corner -->
+                    <BeginStoryboard
+                                                        x:Name="AGB8_BLUR_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB8_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB9_BLUR_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB9_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB10_BLUR_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB10_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB11_BLUR_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB11_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <!-- Blur From Right Up Corner -->
+                    <BeginStoryboard
+                                                        x:Name="AGB7_BLUR_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB7_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB6_BLUR_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB6_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB5_BLUR_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB5_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB4_BLUR_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB4_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <!-- Blur From Left Down Corner -->
+                    <BeginStoryboard
+                                                        x:Name="AGB15_BLUR_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB15_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB14_BLUR_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB14_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB13_BLUR_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB13_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB12_BLUR_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB12_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <!-- Blur From Left Up Corner -->
+                    <BeginStoryboard
+                                                        x:Name="AGB16_BLUR_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB16_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB1_BLUR_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB1_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB2_BLUR_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB2_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB3_BLUR_SB_Enter">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB3_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+
+                <Trigger.ExitActions>
+                    <!-- From Right Down Corner -->
+                    <BeginStoryboard
+                                                        x:Name="AGB11_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB11"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB10_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB10"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB9_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB9"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB8_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB8"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <!-- From Right Up Corner -->
+                    <BeginStoryboard
+                                                        x:Name="AGB4_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB4"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB5_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB5"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB6_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB6"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB7_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB7"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <!-- From Left Down Corner -->
+                    <BeginStoryboard
+                                                        x:Name="AGB12_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB12"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB13_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB13"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB14_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB14"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB15_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB15"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <!-- From Left Up Corner -->
+                    <BeginStoryboard
+                                                        x:Name="AGB3_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB3"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB2_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB2"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB1_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB1"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB16_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB16"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+
+                    <!-- Blur From Right Down Corner -->
+                    <BeginStoryboard
+                                                        x:Name="AGB11_BLUR_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB11_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB10_BLUR_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB10_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB9_BLUR_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB9_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB8_BLUR_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB8_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <!-- Blur From Right Up Corner -->
+                    <BeginStoryboard
+                                                        x:Name="AGB4_BLUR_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB4_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB5_BLUR_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB5_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB6_BLUR_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB6_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB7_BLUR_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB7_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <!-- Blur From Left Down Corner -->
+                    <BeginStoryboard
+                                                        x:Name="AGB12_BLUR_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB12_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB13_BLUR_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB13_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB14_BLUR_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB14_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB15_BLUR_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB15_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <!-- Blur From Left Up Corner -->
+                    <BeginStoryboard
+                                                        x:Name="AGB3_BLUR_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB3_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.0" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB2_BLUR_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB2_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.025" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB1_BLUR_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB1_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.050" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                    <BeginStoryboard
+                                                        x:Name="AGB16_BLUR_SB_Exit">
+                        <Storyboard>
+                            <ColorAnimation 
+                                                                Storyboard.TargetName="AGB16_BLUR"
+                                                                Storyboard.TargetProperty="(BorderBrush).(SolidColorBrush.Color)"
+                                                                To="#00FFFFFF"
+                                                                BeginTime="0:0:0.075" 
+                                                                Duration="0:0:0.200"
+                                                                AutoReverse="False"
+                                                                RepeatBehavior="1x">
+
+                            </ColorAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+            </Trigger>
+
+            <Trigger Property="IsPressed" Value="True">
+                <Trigger.Setters>
+                    <!--<Setter Property="Background" Value="{DynamicResource PressPrimaryButtonColor}" />-->
+                    <Setter TargetName="ButtonBlurBorderGrid" Property="Visibility" Value="Hidden"/>
+                </Trigger.Setters>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+</ResourceDictionary>
