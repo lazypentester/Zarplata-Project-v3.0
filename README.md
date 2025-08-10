@@ -1,8 +1,27 @@
-# 🤖 Zarplata-Project-v3.0
+# 🤖 Zarplata Project v3.0
 
-Automated distributed task execution system for socpublic.com with:
-Multi-component architecture (Proxy Parser, Task Bot, Web Server, WPF Admin) with real-time coordination via SignalR with JWT authentication.
-MongoDB storage, HTTP clients, JS-in-C# for code deobfuscation and integration with third-party captcha solving services.
+<p>Automated distributed task execution system for socpublic.com</p>
+
+## ⚙️ Features
+
+- Authorization
+- Multi-component architecture (Proxy Parser/Checker, Task Bot, Web Server, WPF Admin)
+- Real-time coordination via SignalR with JWT authentication
+- MongoDB storage
+- HTTP clients
+- JS-in-C# for code deobfuscation
+- Third-party captcha solving services
+- Automatic distributed execution of tasks on the platform simultaneously by multiple accounts
+- System administration from a desktop application
+- Instant connection/disconnection of units (bots) to the system
+
+## 🛠 Tech Stack
+
+**Admin Client:** C# WPF
+
+**Server:** C#
+
+## Demo
 
 <img width="1920" height="1037" alt="image_2024-02-16_04-56-40" src="https://github.com/user-attachments/assets/11f1c666-d187-49b4-aa42-57727cf31d84" />
 
