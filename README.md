@@ -1,6 +1,6 @@
 # 🤖 Zarplata Project v3.0
 
-<p>Automated distributed task execution system for socpublic.com</p>
+<p>🌐 Automated distributed task execution system for socpublic.com</p>
 
 ## ⚙️ Features
 
