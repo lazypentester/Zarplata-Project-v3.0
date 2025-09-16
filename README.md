@@ -17,9 +17,13 @@
 
 ## 🛠 Tech Stack
 
-**Admin Client:** C# WPF
+**Admin Client:** C# (WPF Desktop App)
 
-**Server:** C#
+**Server:** C# (ASP.NET Web Api)
+
+**Bot Clients:** C# (.Net Core Console Client)
+
+**Database as Storage:** MongoDB
 
 ## Demo
 
